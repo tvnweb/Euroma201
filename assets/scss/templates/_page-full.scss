@@ -1,0 +1,9 @@
+#full{
+  padding: 3% 3%;
+  h2{text-decoration: underline; text-transform: uppercase; font-size:1.5em;padding-bottom: 3%;}
+    @include grid-row();
+  .content-full{
+    @include grid-column(12);
+    
+  }
+}

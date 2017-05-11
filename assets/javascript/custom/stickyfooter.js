@@ -1,18 +1,18 @@
-/* Sticky Footer */
 
-(function($) {
+$(window).bind(' load resize orientationChange ', function () {
+   var footer = $("#footer-container");
+   var pos = footer.position();
+   var height = $(window).height();
+   height = height - pos.top;
+   height = height - footer.height() -1;
 
-  var $footer = $('#footer-container'); // only search once
+   function stickyFooter() {
+     footer.css({
+         'margin-top': height + 'px'
+     });
+   }
 
-  $(window).bind('load resize orientationChange', function () {
-
-    var pos = $footer.position(),
-        height = ($(window).height() - pos.top) - ($footer.height() -1);
-
-    if (height > 0) {
-       $footer.css('margin-top', height);
-    }
-
-  });
-
-})(jQuery);
+   if (height > 0) {
+     stickyFooter();
+   }
+});

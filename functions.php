@@ -20,15 +20,11 @@ require_once( 'library/cleanup.php' );
 /** Required for Foundation to work properly */
 require_once( 'library/foundation.php' );
 
-/** Format comments */
-require_once( 'library/class-foundationpress-comments.php' );
-
 /** Register all navigation menus */
 require_once( 'library/navigation.php' );
 
 /** Add menu walkers for top-bar and off-canvas */
-require_once( 'library/class-foundationpress-top-bar-walker.php' );
-require_once( 'library/class-foundationpress-mobile-walker.php' );
+require_once( 'library/menu-walkers.php' );
 
 /** Create widget areas in sidebar and footer */
 require_once( 'library/widget-areas.php' );
@@ -52,4 +48,123 @@ require_once( 'library/sticky-posts.php' );
 require_once( 'library/responsive-images.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
-// require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
+// require_once( 'library/protocol-relative-theme-assets.php' );
+
+
+
+function custom_post() {
+/*Post type: SLIDER*/
+  register_post_type( 'slider', /* nome del custom post type */
+  // aggiungiamo ora tutte le impostazioni necessarie, in primis definiamo le varie etichette mostrate nei menù
+    array('labels' => array(
+        'name' => 'Sliders', /* Nome, al plurale, dell'etichetta del post type. */
+        'singular_name' => 'Slider', /* Nome, al singolare, dell'etichetta del post type. */
+        'all_items' => 'Tutti gli sliders', /* Testo mostrato nei menu che indica tutti i contenuti del post type */
+        'add_new' => 'Aggiungi nuovo', /* Il testo per il pulsante Aggiungi. */
+        'add_new_item' => 'Aggiungi nuovo slider', /* Testo per il pulsante Aggiungi nuovo post type */
+        'edit_item' => 'Modifica Slider', /*  Testo per modifica */
+        'new_item' => 'Nuovo Slider' /* Testo per nuovo oggetto */
+      ), /* Fine dell'array delle etichette */
+        'description' => 'Elenco Slider', /* Una breve descrizione del post type */
+        'menu_icon' => get_stylesheet_directory_uri() . '/assets/img/icons/sliders.png', /* Scegli l'icona da usare nel menù per il posty type */
+        'public' => true, /* Definisce se il post type sia visibile sia da front-end che da back-end */
+        /* la riga successiva definisce quali elementi verranno visualizzati nella schermata di creazione del post */
+        'supports' => array( 'title','excerpt', 'custom-fields','sticky')
+    ) /* fine delle opzioni */
+  ); /* fine della registrazione */
+
+  /*Post type: CLAIM*/
+    register_post_type( 'claim', /* nome del custom post type */
+    // aggiungiamo ora tutte le impostazioni necessarie, in primis definiamo le varie etichette mostrate nei menù
+      array('labels' => array(
+          'name' => 'Claims', /* Nome, al plurale, dell'etichetta del post type. */
+          'singular_name' => 'Claim', /* Nome, al singolare, dell'etichetta del post type. */
+          'all_items' => 'Tutti i Claims', /* Testo mostrato nei menu che indica tutti i contenuti del post type */
+          'add_new' => 'Aggiungi nuovo', /* Il testo per il pulsante Aggiungi. */
+          'add_new_item' => 'Aggiungi nuovo claim', /* Testo per il pulsante Aggiungi nuovo post type */
+          'edit_item' => 'Modifica claim', /*  Testo per modifica */
+          'new_item' => 'Nuovo claim' /* Testo per nuovo oggetto */
+        ), /* Fine dell'array delle etichette */
+          'description' => 'Elenco Claims', /* Una breve descrizione del post type */
+          'menu_icon' => get_stylesheet_directory_uri() . '/assets/img/icons/claim.png', /* Scegli l'icona da usare nel menù per il posty type */
+          'public' => true, /* Definisce se il post type sia visibile sia da front-end che da back-end */
+          /* la riga successiva definisce quali elementi verranno visualizzati nella schermata di creazione del post */
+          'supports' => array( 'title','excerpt', 'custom-fields','sticky')
+      ) /* fine delle opzioni */
+    ); /* fine della registrazione */
+
+    /*Post type: BOTTONI HP*/
+      register_post_type( 'link', /* nome del custom post type */
+      // aggiungiamo ora tutte le impostazioni necessarie, in primis definiamo le varie etichette mostrate nei menù
+        array('labels' => array(
+            'name' => 'Link HP', /* Nome, al plurale, dell'etichetta del post type. */
+            'singular_name' => 'Link', /* Nome, al singolare, dell'etichetta del post type. */
+            'all_items' => 'Tutti i Links', /* Testo mostrato nei menu che indica tutti i contenuti del post type */
+            'add_new' => 'Aggiungi nuovo', /* Il testo per il pulsante Aggiungi. */
+            'add_new_item' => 'Aggiungi nuovo link', /* Testo per il pulsante Aggiungi nuovo post type */
+            'edit_item' => 'Modifica link', /*  Testo per modifica */
+            'new_item' => 'Nuovo link' /* Testo per nuovo oggetto */
+          ), /* Fine dell'array delle etichette */
+            'description' => 'Elenco Links', /* Una breve descrizione del post type */
+            'menu_icon' => get_stylesheet_directory_uri() . '/assets/img/icons/link.png', /* Scegli l'icona da usare nel menù per il posty type */
+            'public' => true, /* Definisce se il post type sia visibile sia da front-end che da back-end */
+            /* la riga successiva definisce quali elementi verranno visualizzati nella schermata di creazione del post */
+            'supports' => array( 'title','excerpt', 'custom-fields','sticky')
+        ) /* fine delle opzioni */
+      ); /* fine della registrazione */
+
+
+
+
+
+
+
+
+
+
+              register_post_type( 'Produce',
+          				array(
+          						'labels' => array(
+          								'name' => __( 'Products' ),
+          								'singular_name' => __( 'Product' )
+          						),
+          						'public' => true,
+          						'has_archive' => true,
+          						'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ),
+          						'taxonomies' => array('category', 'post_tag')
+          				)
+          		);
+
+          		/* POST TYPE NEWS - Salvatore*/
+          		register_post_type( 'news',
+          			array(
+          				'labels' => array(
+          					'name' => __( 'News' ),
+          					'singular_name' => __( 'News' )
+          				),
+          			'public' => true,
+          			'has_archive' => true,
+          			'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ),
+          			'taxonomies' => array('category', 'post_tag')
+          			)
+          		);
+
+          //Matti aggiunto customa field Promozioni 20-02-2014//
+
+          		register_post_type( 'promozioni',
+          			array(
+          				'labels' => array(
+          					'name' => __( 'Promozioni' ),
+          					'singular_name' => __( 'Promozioni' )
+          				),
+          			'public' => true,
+          			'has_archive' => true,
+          			'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ),
+          			'taxonomies' => array('category', 'post_tag')
+          			)
+          		);
+
+}
+
+// Inizializzazione della funzione
+add_action( 'init', 'custom_post');

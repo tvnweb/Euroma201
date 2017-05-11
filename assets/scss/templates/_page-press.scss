@@ -1,0 +1,45 @@
+
+#press{
+  padding: 3% 0 !important;
+  h2{text-decoration: underline; text-transform: uppercase; font-size:1.5em;padding-bottom: 3%;}
+  p{text-transform: uppercase; font-size: 0.9em; text-decoration: underline; cursor: pointer;}
+  img{cursor: pointer;}
+
+  @include breakpoint(small) {
+    @include grid-row();
+    .griglia-press{
+      img.thumbnail{width: 90%;}
+      @include grid-column(6);
+    }
+  }
+
+  @include breakpoint(medium) {
+    @include grid-row();
+    .griglia-press{
+      img.thumbnail{width: 90%;}
+      @include grid-column(3);
+    }
+  }
+
+  @include breakpoint(large) {
+    @include grid-row();
+    .griglia-press{
+      img.thumbnail{width: 90%;}
+      @include grid-column(3);
+    }
+  }
+}
+
+
+
+#list-press{
+  padding: 3% 0 ;
+  @include grid-row();
+  .view{
+    border-top: 1px solid #000000;
+    p{text-transform: uppercase;
+      a{color: #000000; }
+      a:hover{text-decoration: underline;}
+    }
+  }
+}

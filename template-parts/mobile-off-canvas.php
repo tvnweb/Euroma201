@@ -7,9 +7,10 @@
  */
 
 ?>
+<div class="off-canvas position-left" role="navigation" id="mobile-menu" data-off-canvas>
+  <nav role="navigation">
+    <?php foundationpress_mobile_nav(); ?>
+  </nav>
+  </div>
 
-<nav class="off-canvas position-left" id="<?php foundationpress_mobile_menu_id(); ?>" data-off-canvas data-auto-focus="false" role="navigation">
-  <?php foundationpress_mobile_nav(); ?>
-</nav>
-
-<div class="off-canvas-content" data-off-canvas-content>
+</div>
