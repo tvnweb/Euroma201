@@ -1,5 +1,3 @@
-
-
 <?php
 /**
  * The main template file
@@ -21,14 +19,36 @@ get_header(); ?>
 
   <img src="http://localhost/euroma2/wp-content/uploads/fotograndeCentro.jpg" />
   <div id="icon-menubar">
-
+    <div class="icon-menuitem">
+      <a href="#">
+        <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_negozi.png" />
+        <br/>NEGOZI
+      </a>
+    </div>
+    <div class="icon-menuitem">
+      <a href="#">
+        <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_idee-regalo.png" />
+        <br/>IDEE REGALO
+      </a>
+    </div>
+    <div class="icon-menuitem">
+      <a href="#">
+        <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_eventi.png" />
+        <br/>EVENTI
+      </a>
+    </div>
+    <div class="icon-menuitem">
+      <a href="#">
+        <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_orari.png" />
+        <br/>ORARI
+      </a>
+    </div>
   </div>
 </section>
 
 <section id="slider">
-  <div class="testo">
-    <h3>EVENTI IN EUROMA2</h3>
-  </div>
+  <br/>
+  <h3>EVENTI</h3>
   <div class="orbit" role="region" aria-label="HP Slide" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
     <ul class="orbit-container">
           <?php $args = array(
@@ -57,11 +77,12 @@ get_header(); ?>
   </div>
 </section>
 
-<section id="news">
-  <div class="newsbox" id="promo">
+<section id="info">
+  <div class="infobox" id="promo">
+    <h4>PROMOZIONI</h4>
 
     <?php
-    $promo_args = array('post_type' => 'promozioni','cat'=> 418, 'posts_per_page' => 1);
+    $promo_args = array('post_type' => 'promozioni','cat'=> 418, 'posts_per_page' => 1, 'orderby' => 'rand');
     $promozioni = new WP_Query($promo_args);
 
     while($promozioni->have_posts()) : $promozioni->the_post();
@@ -87,18 +108,47 @@ get_header(); ?>
 
     ?>
 
-    <span> <?php the_post_thumbnail('eventi'); ?> </span>
+    <div class="promo"> <?php the_post_thumbnail('eventi'); ?> </div>
 
   <?php
     endif;
   endwhile; ?>
 
   </div>
-  <div class="newsbox" id="eventi"></div>
-  <div class="newsbox" id="notizie"></div>
+  <div class="infobox" id="notizie">
+    <h4>NEWS</h4>
+    <?php
+    $eventi_args = array('post_type' => 'news','cat' => '414', 'posts_per_page' => 1,'orderby' => 'rand','date_query' => array(
+		array(
+			'after'     => 'September 1st, 2016'
+		),
+	),);
+    $eventi = new WP_Query($eventi_args);
+
+    while($eventi->have_posts()) : $eventi->the_post();
+
+    ?>
+
+    <span> <?php
+      $image = get_field('thumb');
+      $permalink = get_permalink(); ?>
+      <a href="<?php echo $permalink; ?>"><img src="<?php echo $image['url']; ?>" /></a>
+    </span>
+
+  <?php
+
+  endwhile; ?>
+  </div>
+  <div class="infobox" id="orari">
+    <h3>&#160;</h3>
+    <?php echo do_shortcode( "[op-overview set_id='orari-centro' include_io='true' hide_io_date='true' include_holidays='true' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Orari del Centro']" ); ?>
+    <?php echo do_shortcode( "[op-overview set_id='galleria' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Galleria']" ); ?>
+    <?php echo do_shortcode( "[op-overview set_id='food' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Food Court']" ); ?>
+    <?php echo do_shortcode( "[op-overview set_id='iper'  compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Ipermercato']" ); ?>
+  </div>
 </section>
 
-<section id="gallery-hp">
+<section id="gallery">
 
   <?php $args = array(
       'post_type' => 'link',
@@ -115,7 +165,7 @@ get_header(); ?>
         if( !empty($img) ): ?>
         <div class="hp-button small-12 columns" role="main" >
 
-              <img src="<?php echo $img['url']; ?>">
+              <img src="<?php echo $img['url']; ?>" />
 
             <div class="caption">
               <?php if ($tipo == "video"): ?>
@@ -126,10 +176,6 @@ get_header(); ?>
               </a>
             </div>
 
-
-
-
-
         </div>
       <?php
           endif;
@@ -138,6 +184,46 @@ get_header(); ?>
       wp_reset_postdata();
 
 ?>
+</section>
+
+<section id="servizi">
+  <div class="testo">
+    <h3>SERVIZI</h3>
+  </div>
+  <div class="ico-serv">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/charge.jpg" />
+  </div>
+  <div class="ico-serv">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/taxi.jpg" />
+  </div>
+  <div class="ico-serv">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/nursery.jpg" />
+  </div>
+  <div class="ico-serv">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/dentista.jpg" />
+  </div>
+  <div class="ico-serv">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/lavanderia.jpg" />
+  </div>
+  <div class="ico-serv">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/parafarm.jpg" />
+  </div>
+  <div class="ico-serv">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/bancomat.jpg" />
+  </div>
+  <div class="ico-serv">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/cappella.jpg" />
+  </div>
+  <div class="ico-serv">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/estetista.jpg" />
+  </div>
+  <div class="ico-serv">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/parrucchiere.jpg" />
+  </div>
+  <div class="ico-serv">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/tabacchi.jpg" />
+  </div>
+  <div class="ico-serv">&#160;</div>
 </section>
 
 
@@ -195,31 +281,10 @@ get_header(); ?>
   </div>
 </section>
 
-<div id="videoModal" class="reveal large" data-reveal>
-  <h2 id="videoModalTitle"></h2>
-  <div class="flex-video widescreen">
-    <video id="videoModalFrame" type="video/mp4" src="" controls allowfullscreen data-reset-on-close></video>
-  </div>
+<section id="contatti">
 
-  <button class="close-button" data-close aria-label="Close modal" type="button" onclick="stopVideo()">
-     <span aria-hidden="true">&times;</span>
-   </button>
-</div>
+</section>
 
-<script type="text/javascript">
-function popupVideo(title,src) {
 
-    $("#videoModalTitle").html(title);
-    $("#videoModalFrame").attr("src", src);
-
-    //var elem = new Foundation.Reveal("");
-    $("#videoModal").foundation("open");
-}
-
-function stopVideo() {
-  $("#videoModalFrame").eq(0).trigger('pause');
-}
-
-</script>
 
 <?php get_footer();

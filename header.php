@@ -42,58 +42,50 @@
 				<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
 				<div class="title-bar-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/logo.png" /></a>
+						<img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/logo.png" />
+					</a>
 				</div>
 
 			</div>
-			<!--nav id="top-navigation" class="top-navigation" role="navigation" >
-				<div id="topmenu-left">
-				<a href="chi-siamo">
-					<?php /*if($GLOBALS['q_config']['language']=="en") : echo "About Us"; else: echo "Chi siamo"; endif; */ ?>
-				</a>
-				<a href="contatti">
-					<?php /*if($GLOBALS['q_config']['language']=="en") : echo "Contacts"; else: echo "Contatti"; endif;*/  ?>
-				</a>
-				</div>
-				<div id="topmenu-right">
-				<a href="http://entry.grandprixadvertisingstrategies.com/user/login" target="_blank">Login</a>
-				<a href="http://entry.grandprixadvertisingstrategies.com/user/register" target="_blank">
-					<?php /*if($GLOBALS['q_config']['language']=="en") : echo "Register"; else: echo "Registrati"; endif;*/  ?>
-				</a>
 
-
-				&#160;&#160;&#160;&#160;&#160;
-				<a class="noborder"><i class="fa fa-search" aria-hidden="true"></i></a>
-
-				<a class="noborder" href="http://www.grandprixadvertisingstrategies.com/it/">Ita</a>
-				<a href="http://www.grandprixadvertisingstrategies.com/en/">Eng</a>
-
-				</div>
-			</nav-->
 			<div data-sticky class="sticky" data-margin-top="0" style="width:100%;">
 			<nav id="site-navigation" class="main-navigation top-bar bigger" role="navigation" style="width:100%">
 				<div class="top-bar-left">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/logo.png" /></a>
-
-
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/logo.png" />
+						</a>
+						<span class="top-links">
+							<a href="#">Info</a>
+							<a href="#">Newsletter</a>
+						</span>
+						<span class="orario">
+							<b>Apertura centro</b><br/>
+							<?php echo do_shortcode( "[op-is-open set_id='orari-centro' open_text=' ' closed_text='CHIUSO' show_today='open' time_format='G:i' ]" ); ?>
+						</span>
 
 					<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
 						<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
 					<?php endif; ?>
 
-
 				</div>
+
+				<div class="lang">
+					<img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/flag_ita.gif" />
+				</div>
+
+				<div class="search">
+					<input type="text" name="search-string" placeholder="cerca negozio" />
+					<i class="fa fa-search"></i>
+				</div>
+
 				<div class="socials show-for-large">
 					<!-- socials -->
-					<!--span class="show-for-xlarge">Seguici su: &#160;</span-->
 					<a target="_blank" href="https://www.facebook.com/CentroCommercialeEuroma2/">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
 						</span>
 					</a>
-
 
 					<a target="_blank" href="https://youtube.com/user/Euroma2Official">
 						<span class="fa-stack fa-lg">
@@ -108,7 +100,6 @@
 							<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
 						</span>
 					</a>
-
 				</div>
 
 			</nav>
