@@ -1,6 +1,6 @@
 body{background-color:$white;}
 p{margin: 0 !important;}
-section {padding: 3% 0; text-align: center;}
+section { text-align: center; font-family: 'Muli'; }
 .testo{padding: 2% 0}
 h3{font-family: 'Muli'; font-size: 1.2em; text-transform: uppercase; font-weight: 800; }
 .testo p{
@@ -64,7 +64,7 @@ li.blurImg img {
 
 .js-dropdown-active { z-index: 0 !important; }
 
-#slider { padding: 24px 12%; }
+#slider { padding: 24px 12%; margin: 2% 0; background-color: #f8f8ee; }
 
 #gallery{
   @include grid-row();
@@ -79,7 +79,17 @@ li.blurImg img {
   h4 { text-align: center; font-weight: bold; font-size: 15px; }
   @include grid-row();
   .infobox {
-    .promo { border: 1px solid #888; box-shadow: 3px 3px 1px #888; }
+
+    .promo {
+      float: left;
+      position: relative;
+      border: 1px solid #888;
+      box-shadow: 3px 3px 1px #888;
+      font-size: 13px;
+      b { text-transform: uppercase; }
+      b,i,p { float: left;  clear: left;  margin: 4px !important; }
+
+    }
     @include grid-column(4);
     .columns{padding: 0;}
   }
@@ -97,12 +107,20 @@ li.blurImg img {
 
 
 #servizi {
-  padding: 14px 15%;
-  @include grid-row();
-  .ico-serv {
-     padding: 4px !important;
-     @include grid-column(3);
+  background-color: #f8f8ee;
 
+  padding: 14px 15%;
+  margin: 2% 0;
+  text-align: center;
+  font-family: Muli;
+  .griglia-servizi {
+    @include grid-row();
+    width: 100% !important;
+    .ico-serv {
+       padding: 4px !important;
+       @include grid-column(3);
+
+    }
   }
 }
 
@@ -112,27 +130,55 @@ li.blurImg img {
   margin-top: 14px;
   padding: 10px 10%;
 
-#lista-loghi {
-  @include grid-row();
+  #lista-loghi {
+    @include grid-row();
     max-width: 57rem !important;
     .thumbnail{box-shadow: 0 0 0 0 !important;}
-      @include breakpoint(small) {
-         .griglia-loghi {
-           padding: 0 !important;
-            img {width: 100%; }
-             @include grid-column(3);
-           }
-        }
+    @include breakpoint(small) {
+      .griglia-loghi {
+        padding: 0 !important;
+        img {width: 100%; }
+        @include grid-column(3);
+      }
+    }
 
-              @include breakpoint(large) {
+    @include breakpoint(large) {
+      @include grid-row();
+      .griglia-loghi {
+        padding: 0 !important;
+        img {width: 100%; }
+        @include grid-column(3);
+      }
+    }
+  }
 
-                         @include grid-row();
-                                       .griglia-loghi {
-                                         padding: 0 !important;
-                                          img {width: 100%; }
-                                           @include grid-column(3);
-                                         }
-                            }
 }
+
+#contatti {
+  background-color: #f8f8ee;
+  margin: 2% 0 ;
+  padding: 14px 10%;
+
+
+  .box-contatti {
+    text-align: left;
+    font-size: 12px;
+    font-family: Muli;
+    padding: 14px 0;
+    @include grid-row();
+    .intro-row {
+      text-align: left;
+      padding: 14px 0;
+      @include grid-column(12);
+    }
+    .item-contatti {
+      @include grid-column(4);
+      p { margin-top: 10px; }
+    }
+    .mappa {
+      @include grid-column(8);
+    }
+    .riffs { margin-top: 200px; }
+  }
 
 }

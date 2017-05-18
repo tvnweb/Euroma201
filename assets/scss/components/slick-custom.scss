@@ -2,16 +2,14 @@
 background-color:#ffffff ;
 margin-left: auto;
 margin-right: auto;
+height: 100%; 
   @include breakpoint(small) {
-  min-height: 200px !important;
   margin-top: 50px;
   }
   @include breakpoint(medium) {
-  min-height: 200px;
   margin-top: 40px;
   }
   @include breakpoint(large) {
-  min-height: 200px;
   margin-top: 0 !important;
   }
 }

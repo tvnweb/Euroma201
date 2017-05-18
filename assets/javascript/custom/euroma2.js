@@ -57,6 +57,26 @@ $('#mobile-menu a').on('click', function() {
     $('#mobile-menu').foundation('close');
 });
 
+$("#menu-main").find(".menu-item a").click(function() {
+  var sect_id = strstr($(this).eq(0).attr("href"), "#");
+  console.log(sect_id);
+  if(sect_id == "#map") {
+    $('#map').foundation('open');
+  } else if(sect_id != "#") {
+    goto_section($(sect_id));
+  }
+});
+
+$(".menuicon-item a").click(function() {
+  var sect_id = strstr($(this).eq(0).attr("href"), "#");
+  console.log(sect_id);
+  if(sect_id != "#") {
+    goto_section($(sect_id));
+  }
+});
+
+
+
 function isScrolledIntoView(elem)
 {
     var docViewTop = $(window).scrollTop();
@@ -104,7 +124,7 @@ $(window).scroll(function() {
   function goto_section(sect) {
 
     $('html, body').animate({
-      scrollTop: sect.offset().top -50
+      scrollTop: sect.offset().top -130
     },2000);
   }
 
@@ -205,18 +225,6 @@ $(window).scroll(function() {
    });
 
 
-/*Roll-hover immagini HP*/
-$(document).ready(function() {
-  $('.hp-button').hover(
-    function(){
-
-      $(this).find('.caption').fadeIn(350);
-    },
-    function(){
-      $(this).find('.caption').fadeOut(200);
-    }
-  );
-});
 
 /*Roll-hover immagini winner*/
 

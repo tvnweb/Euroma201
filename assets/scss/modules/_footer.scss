@@ -2,7 +2,7 @@
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  background-color: #000000;
+  background-color: #222;
   margin-top: 0;
   padding: 0 15px;
 
@@ -38,6 +38,7 @@
           padding: 0;
         }
         a{
+          text-indent: -16px;
           color: #ffffff;
           @include breakpoint(small) {
             font-size: 0.6em !important;
@@ -59,16 +60,14 @@
     }
 
 
-
 }
 
-#banda-loghi{
-  background-color: #ffffff;
-  margin: 5% auto;
-  text-align: center;
-  @include grid-row();
-}
-
-#banda-loghi > img {
-  padding: 0 5% !important;
+.bottom-bar {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 1% 0 ;
+  font-size: 11px;
+  a { color: #fff; }
 }

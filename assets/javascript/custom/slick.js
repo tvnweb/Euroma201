@@ -1,4 +1,16 @@
 $(document).on('ready', function() {
+
+  $('.single-slide').slick({
+      dots: false,
+      arrows:false,
+      infinite: true,
+      speed: 1000,
+      autoplay:true,
+      autoplaySpeed:3300,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+
   $('.responsive').slick({
       dots: false,
       arrows:false,

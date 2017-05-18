@@ -18,27 +18,27 @@ get_header(); ?>
 <section id="hp">
 
   <img src="http://localhost/euroma2/wp-content/uploads/fotograndeCentro.jpg" />
-  <div id="icon-menubar">
-    <div class="icon-menuitem">
+  <div id="menuicon-bar">
+    <div class="menuicon-item">
       <a href="#">
         <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_negozi.png" />
         <br/>NEGOZI
       </a>
     </div>
-    <div class="icon-menuitem">
+    <div class="menuicon-item">
       <a href="#">
         <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_idee-regalo.png" />
         <br/>IDEE REGALO
       </a>
     </div>
-    <div class="icon-menuitem">
+    <div class="menuicon-item">
       <a href="#">
         <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_eventi.png" />
         <br/>EVENTI
       </a>
     </div>
-    <div class="icon-menuitem">
-      <a href="#">
+    <div class="menuicon-item">
+      <a href="#orari">
         <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_orari.png" />
         <br/>ORARI
       </a>
@@ -47,8 +47,6 @@ get_header(); ?>
 </section>
 
 <section id="slider">
-  <br/>
-  <h3>EVENTI</h3>
   <div class="orbit" role="region" aria-label="HP Slide" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
     <ul class="orbit-container">
           <?php $args = array(
@@ -81,66 +79,91 @@ get_header(); ?>
   <div class="infobox" id="promo">
     <h4>PROMOZIONI</h4>
 
-    <?php
-    $promo_args = array('post_type' => 'promozioni','cat'=> 418, 'posts_per_page' => 1, 'orderby' => 'rand');
-    $promozioni = new WP_Query($promo_args);
+    <div class="carousel">
+      <div class="single-slide slider">
 
-    while($promozioni->have_posts()) : $promozioni->the_post();
-      /* DATI PROMOZIONE */
-      $data_out = get_post_meta($post->ID, 'data_fine', true);
-      $today = date(Ymd);
-      if($today <= $data_out ) :
-        $titolo= get_the_title();
-        $id_promo_negozio= get_post_meta($post->ID, 'id_promo_negozio', true);
+        <?php
+        $promo_args = array('post_type' => 'promozioni','cat'=> 418, 'posts_per_page' => 100, 'orderby' => 'rand');
+        $promozioni = new WP_Query($promo_args);
 
-        $desc= get_the_content();
-        $data_in = get_post_meta($post->ID, 'data_inizio', true);
-        $data_inizio= date("d.m.Y", strtotime($data_in));
+        while($promozioni->have_posts()) : $promozioni->the_post();
+          /* DATI PROMOZIONE */
+          $data_out = get_post_meta($post->ID, 'data_fine', true);
+          $today = date(Ymd);
+          if($today <= $data_out ) :
+            $titolo= get_the_title();
+            $desc= get_the_content();
+            //$id_promo_negozio= get_post_meta($post->ID, 'id_promo_negozio', true);
 
-        $data_fine= date("d.m.Y", strtotime($data_out));
+            $desc= get_the_content();
+            $data_in = get_post_meta($post->ID, 'data_inizio', true);
+            $data_inizio= date("d.m.Y", strtotime($data_in));
 
-        $link= get_permalink();
+            $data_fine= date("d.m.Y", strtotime($data_out));
 
-        /* DATI NEGOZIO */
-        $shop_args = array('p' => $id_promo_negozio, 'post_type'=>'post');
-        $negozio = new WP_Query($shop_args);
-        $negozio->the_post();
+            $link= get_permalink();
 
-    ?>
 
-    <div class="promo"> <?php the_post_thumbnail('eventi'); ?> </div>
+        ?>
 
-  <?php
-    endif;
-  endwhile; ?>
+        <div class="promo">
+          <a href="<?php echo $link; ?>">
+          <?php the_post_thumbnail('eventi'); ?>
+          </a>
+          <b><?php echo $titolo; ?></b>
+          <i>Dal <?php echo $data_inizio;?> al <?php echo $data_fine;?></i>
+          <!--p><?php echo $desc; ?></p-->
+
+        </div>
+
+      <?php
+        endif;
+      endwhile; ?>
+
+    </div>
+  </div>
 
   </div>
+
   <div class="infobox" id="notizie">
     <h4>NEWS</h4>
+    <div class="carousel">
+      <div class="single-slide slider">
     <?php
-    $eventi_args = array('post_type' => 'news','cat' => '414', 'posts_per_page' => 1,'orderby' => 'rand','date_query' => array(
-		array(
-			'after'     => 'September 1st, 2016'
-		),
-	),);
-    $eventi = new WP_Query($eventi_args);
+    $news_args = array('post_type' => 'news','cat' => '414', 'posts_per_page' => 7,'orderby' => 'date');
+    $news = new WP_Query($news_args);
 
-    while($eventi->have_posts()) : $eventi->the_post();
+    while($news->have_posts()) : $news->the_post();
 
     ?>
 
-    <span> <?php
+    <div class="promo"> <?php
+      $titolo= get_the_title();
       $image = get_field('thumb');
-      $permalink = get_permalink(); ?>
-      <a href="<?php echo $permalink; ?>"><img src="<?php echo $image['url']; ?>" /></a>
-    </span>
+      /*if($image['url'] == "") {
+        $image = get_post_thumbnail();
+      }*/
+      //$desc= get_the_content();
+      $permalink = get_permalink();
+
+      ?>
+      <a href="<?php echo $permalink; ?>">
+        <?php the_post_thumbnail('eventi'); ?>
+      </a>
+      <b><?php echo $titolo; ?></b>
+      <i><?php the_date("d.m.Y"); ?></i>
+    </div>
 
   <?php
 
   endwhile; ?>
+</div>
+</div>
   </div>
+  <a name="orari"></a>
   <div class="infobox" id="orari">
     <h3>&#160;</h3>
+
     <?php echo do_shortcode( "[op-overview set_id='orari-centro' include_io='true' hide_io_date='true' include_holidays='true' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Orari del Centro']" ); ?>
     <?php echo do_shortcode( "[op-overview set_id='galleria' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Galleria']" ); ?>
     <?php echo do_shortcode( "[op-overview set_id='food' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Food Court']" ); ?>
@@ -187,43 +210,47 @@ get_header(); ?>
 </section>
 
 <section id="servizi">
-  <div class="testo">
-    <h3>SERVIZI</h3>
+  <h3>SERVIZI</h3>
+
+  <div class="griglia-servizi">
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/charge.jpg" />
+    </div>
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/taxi.jpg" />
+    </div>
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/nursery.jpg" />
+    </div>
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/wifi.jpg" />
+    </div>
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/dentista.jpg" />
+    </div>
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/lavanderia.jpg" />
+    </div>
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/parafarm.jpg" />
+    </div>
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/bancomat.jpg" />
+    </div>
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/cappella.jpg" />
+    </div>
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/estetista.jpg" />
+    </div>
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/parrucchiere.jpg" />
+    </div>
+    <div class="ico-serv">
+      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/tabacchi.jpg" />
+    </div>
+    <div class="ico-serv">&#160;</div>
   </div>
-  <div class="ico-serv">
-    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/charge.jpg" />
-  </div>
-  <div class="ico-serv">
-    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/taxi.jpg" />
-  </div>
-  <div class="ico-serv">
-    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/nursery.jpg" />
-  </div>
-  <div class="ico-serv">
-    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/dentista.jpg" />
-  </div>
-  <div class="ico-serv">
-    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/lavanderia.jpg" />
-  </div>
-  <div class="ico-serv">
-    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/parafarm.jpg" />
-  </div>
-  <div class="ico-serv">
-    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/bancomat.jpg" />
-  </div>
-  <div class="ico-serv">
-    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/cappella.jpg" />
-  </div>
-  <div class="ico-serv">
-    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/estetista.jpg" />
-  </div>
-  <div class="ico-serv">
-    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/parrucchiere.jpg" />
-  </div>
-  <div class="ico-serv">
-    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/tabacchi.jpg" />
-  </div>
-  <div class="ico-serv">&#160;</div>
 </section>
 
 
@@ -233,7 +260,9 @@ get_header(); ?>
       <h3>I NOSTRI BRAND</h3>
     </div>
 
-
+<?php
+  //wp_nav_menu(array('menu' => 'Negozi'));
+?>
 
 
 <!-- Slider loghi -->
@@ -282,6 +311,73 @@ get_header(); ?>
 </section>
 
 <section id="contatti">
+  <h3>COME RAGGIUNGERCI</h3>
+
+
+  <div class="box-contatti">
+    <div class="intro-row">
+      <b>ROMA</b>, Via Cristoforo Colombo, angolo Viale dell'Oceano Pacifico.
+    </div>
+    <div class="item-contatti">
+      <b>IN AUTO</b>
+      <p>
+      Da Roma Città prendere Via Cristoforo Colombo direzione Roma Eur - Pontina.
+      Circa 500 metri dopo il Palazzo dello sport troverete il Centro sulla destra, all'incrocio con Via dell'Oceano Pacifico.
+      <br/>
+      Dal Raccordo anulare(G.R.A.) prendere l'uscita 26 del G.R.A. in direzione Centro - Eur.
+      Dopo circa 2 km troverete le indicazioni per raggiungere Euroma2.
+      </p>
+    </div>
+
+    <div class="item-contatti">
+    <b>IN METROPOLITANA</b>
+    <p>
+    linea B fermata Eur - Fermi<br/>
+    Da qui prendere le linee 070 700 709 e scendere alla fermata Colombo/Pacifico.
+    </p>
+    <br/>
+    <b>IN AUTOBUS</b>
+    <p>
+    Linee: 070 700 709 fermata Colombo/Pacifico.<br/>
+    Linea: 788
+    </p>
+    </div>
+
+    <div class="item-contatti">
+    <b>IN TAXI</b>
+    <p>
+    Da Roma città potete chiamare uno dei seguenti numeri di telefono,
+    per richiedere un taxi:
+    Autoradiotaxi Roma Tel: 063570<br/>
+    Cooperativa Samarcanda Tel: 065551
+    <br/><br/>
+    Ad Euroma2 è attivo un servizio taxi. Da Euroma2, perciò, potete richiedere
+    un taxi alla nostra hostess, presso il Punto Informazioni, presente al
+    piano terra di Euroma2.
+    <br/>
+    </p>
+    </div>
+
+    <div class="mappa">
+      <br/>
+      <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d95132.91027136106!2d12.439482931152343!3d41.830377211057495!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x896257efdd648ae0!2sEuroma2!5e0!3m2!1sit!2sus!4v1494922642678"></iframe>
+
+    </div>
+
+    <div class="item-contatti">
+      <div class="riffs">
+      <b>EUROMA2</b><br/><br/>
+      <p>
+      ROMA, Via Cristoforo Colombo,<br/>angolo Viale dell'Oceano Pacifico<br/><br/>
+      Tel. +39 06 5262161<br/>
+      Fax +39 06 526216145<br/>
+      E-mail <a href="mailto:info@euroma2.it">info@euroma2.it</a>
+      </p>
+      </div>
+    </div>
+
+</div>
 
 </section>
 

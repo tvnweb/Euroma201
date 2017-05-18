@@ -260,12 +260,12 @@
 
 }
 
-#icon-menubar {
+#menuicon-bar {
   @include grid-row();
   width :100%;
   height: 90px;
   background-color: #303030;
-  .icon-menuitem {
+  .menuicon-item {
     img { height: 64px; }
     padding: 4px 10px !important;
     @include grid-column(3);
@@ -291,3 +291,35 @@
   b { color: #f1bc26; }
 
 }
+
+#rightmenu {
+  position: fixed;
+
+  opacity: 0.8;
+  z-index: 200;
+  top: 170px;
+  right: -170px;
+  .tab { float: left; font-size: 11px; text-transform: uppercase;
+    background-color: #fff; padding: 7px; cursor: pointer;
+    border: 1px solid #f1bc26; font-weight: bold;
+    border-right: 0;
+    box-shadow: 1px 1px 1px rgba(70,70,70,0.9);
+  }
+  .scci-menu { float: left; font-size: 50px; background-color: #fff;
+    border-top: 1px solid #f1bc26;
+    border-bottom: 1px solid #f1bc26;
+    box-shadow: 1px 1px 1px rgba(70,70,70,0.9);
+    a > span { color: #222; }
+    .icon-logo_Aprilia:hover { color: #ffa518; }
+    .icon-logo_Adriatico:hover { color: #269045; }
+    .icon-logo_SanMartino:hover { color: #00afe7; }
+
+  }
+
+  transition: all 0.3s linear;
+  &:hover {
+    right: 0;
+  }
+}
+
+#map { width: 870px; background-color: #fff; }

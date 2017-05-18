@@ -16,7 +16,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Development: Di Giorgio Mattia, Alessandro Bassi - Graphic Design: Lorenzo Previati">
 		<?php wp_head(); ?>
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/jwbox.css" />
+
 
 	</head>
 	<body <?php body_class(); ?>>
@@ -36,6 +36,23 @@
 		</a>
 	</div>
 
+	<div id="rightmenu">
+		<div class="tab">I nostri <br/>centri</div>
+		<div class="scci-menu">
+			<ul class="menu vertical">
+				<li><a href="http://www.adriatico2.it"> <span class="icon-logo_Adriatico"></span></a></li>
+				<li><a href="http://www.aprilia-2.it"> <span class="icon-logo_Aprilia"></span></a></li>
+				<li><a href="http://www.sanmartino2.it"> <span class="icon-logo_SanMartino"></span></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="map" class="reveal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+		<button class="close-button" data-close="" aria-label="Close modal" type="button">
+    	<span aria-hidden="true">×</span>
+  	</button>
+  	<iframe id="mapframe" src="/euroma2/mappa/docs/mappa1.php?lang=it&amp;piano=1" width="830" height="515" frameborder="0"></iframe>
+	</div>
 
 	<header id="masthead" class="site-header" data-sticky-container>
 			<div class="title-bar" data-responsive-toggle="site-navigation">
@@ -56,7 +73,7 @@
 						</a>
 						<span class="top-links">
 							<a href="#">Info</a>
-							<a href="#">Newsletter</a>
+							<a href="newsletter">Newsletter</a>
 						</span>
 						<span class="orario">
 							<b>Apertura centro</b><br/>
@@ -70,15 +87,24 @@
 				</div>
 
 				<div class="lang">
-					<img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/flag_ita.gif" />
+					<img src="http://localhost/euroma2/wp-content/plugins/qtranslate-x/flags/it.png" alt="ITA" />
+					<?php /*wp_nav_menu(array('menu' => 'Lingua'));*/ ?>
+					<!--img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/flag_ita.gif" /-->
+
+<!--ul class="vertical menu" data-accordion-menu>
+	<li><a title="ITA" href="?lang=it"><img src="http://localhost/euroma2/wp-content/plugins/qtranslate-x/flags/it.png" alt="ITA"></a></li>
+	<li style="display:none"><a title="ENG" href="?lang=en"><img src="http://localhost/euroma2/wp-content/plugins/qtranslate-x/flags/gb.png" alt="ENG"></a></li>
+	<li style="display:none"><a title="FRA" href="?lang=fr"><img src="http://localhost/euroma2/wp-content/plugins/qtranslate-x/flags/fr.png" alt="FRA"></a></li>
+</ul-->
+
 				</div>
 
-				<div class="search">
+				<div class="search hide-for-large-down">
 					<input type="text" name="search-string" placeholder="cerca negozio" />
 					<i class="fa fa-search"></i>
 				</div>
 
-				<div class="socials show-for-large">
+				<div class="socials hide-for-large-down">
 					<!-- socials -->
 					<a target="_blank" href="https://www.facebook.com/CentroCommercialeEuroma2/">
 						<span class="fa-stack fa-lg">
@@ -120,12 +146,5 @@
 				</ul>
 			</div>
 		</section>
+
 <?php } ?>
-
-
-				<!--script src=<?php echo get_bloginfo('template_url'); ?>/assets/javascript/custom/gp30.js></script>
-				<script src=<?php echo get_bloginfo('template_url'); ?>/assets/javascript/custom/slick.js></script>
-			  <script src=<?php echo get_bloginfo('template_url'); ?>/assets/javascript/custom/slick.min.js></script>
-				<script src=<?php echo get_bloginfo('template_url'); ?>/assets/javascript/jwplayer/jwplayer.js></script>
-				<script src=<?php echo get_bloginfo('template_url'); ?>/assets/javascript/jquery.jwbox.js></script-->
-	<section class="container">

@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'scci';
+  src:  url('../fonts/scci.eot?nbacxf');
+  src:  url('../fonts/scci.eot?nbacxf#iefix') format('embedded-opentype'),
+    url('../fonts/scci.ttf?nbacxf') format('truetype'),
+    url('../fonts/scci.woff?nbacxf') format('woff'),
+    url('../fonts/scci.svg?nbacxf#scci') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'scci' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.icon-logo_SanMartino:before {
+  content: "\e900";
+}
+.icon-logo_Aprilia:before {
+  content: "\e901";
+}
+.icon-logo_Euroma:before {
+  content: "\e902";
+}
+.icon-logo_Adriatico:before {
+  content: "\e903";
+}
+.icon-indicatore:before {
+  content: "\e904";
+  color: #485c6d;
+}
+.icon-mappa_italia:before {
+  content: "\e905";
+  color: #919ca9;
+}
+.icon-logo_SCC:before {
+  content: "\e906";
+  color: #485c6d;
+}
+.icon-flag_Eng .path1:before {
+  content: "\e907";
+  color: rgb(37, 52, 108);
+}
+.icon-flag_Eng .path2:before {
+  content: "\e908";
+  margin-left: -1.5em;
+  color: rgb(207, 23, 44);
+}
+.icon-flag_Eng .path3:before {
+  content: "\e909";
+  margin-left: -1.5em;
+  color: rgb(207, 23, 44);
+}
+.icon-flag_Eng .path4:before {
+  content: "\e90a";
+  margin-left: -1.5em;
+  color: rgb(207, 23, 44);
+}
+.icon-flag_Eng .path5:before {
+  content: "\e90b";
+  margin-left: -1.5em;
+  color: rgb(207, 23, 44);
+}
+.icon-flag_Eng .path6:before {
+  content: "\e90c";
+  margin-left: -1.5em;
+  color: rgb(207, 23, 44);
+}
+.icon-flag_Eng .path7:before {
+  content: "\e90d";
+  margin-left: -1.5em;
+  color: rgb(207, 23, 44);
+}
+.icon-flag_Eng .path8:before {
+  content: "\e90e";
+  margin-left: -1.5em;
+  color: rgb(255, 255, 255);
+}
+.icon-flag_Eng .path9:before {
+  content: "\e90f";
+  margin-left: -1.5em;
+  color: rgb(255, 255, 255);
+}
+.icon-flag_Eng .path10:before {
+  content: "\e910";
+  margin-left: -1.5em;
+  color: rgb(255, 255, 255);
+}
+.icon-flag_Eng .path11:before {
+  content: "\e911";
+  margin-left: -1.5em;
+  color: rgb(255, 255, 255);
+}
+.icon-flag_Eng .path12:before {
+  content: "\e912";
+  margin-left: -1.5em;
+  color: rgb(207, 23, 44);
+}
+.icon-flag_Ita .path1:before {
+  content: "\e913";
+  color: rgb(255, 255, 255);
+}
+.icon-flag_Ita .path2:before {
+  content: "\e914";
+  margin-left: -1.5em;
+  color: rgb(5, 105, 56);
+}
+.icon-flag_Ita .path3:before {
+  content: "\e915";
+  margin-left: -1.5em;
+  color: rgb(207, 23, 44);
+}
