@@ -1,0 +1,19 @@
+.griglia{
+  @include grid-row();
+  margin-top: 50px;
+  h2{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5% 0;
+  }
+
+.griglia-negozi {
+  @include grid-column(3);
+    float: left;
+    padding: 5px !important;
+    border: 1px solid #000000;
+    img {
+        width: 100%;
+    }
+  }
+}

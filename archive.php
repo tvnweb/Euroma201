@@ -44,7 +44,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</article>
-	<?php get_sidebar(); ?>
+
 
 </div>
 
