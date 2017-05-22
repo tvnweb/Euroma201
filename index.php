@@ -17,31 +17,34 @@ get_header(); ?>
 
 <section id="hp">
 
-  <img src="http://localhost/euroma2/wp-content/uploads/fotograndeCentro.jpg" />
-  <div id="menuicon-bar">
-    <div class="menuicon-item">
-      <a href="#">
-        <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_negozi.png" />
-        <br/>NEGOZI
-      </a>
-    </div>
-    <div class="menuicon-item">
-      <a href="#">
-        <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_idee-regalo.png" />
-        <br/>IDEE REGALO
-      </a>
-    </div>
-    <div class="menuicon-item">
-      <a href="#">
-        <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_eventi.png" />
-        <br/>EVENTI
-      </a>
-    </div>
-    <div class="menuicon-item">
-      <a href="#orari">
-        <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_orari.png" />
-        <br/>ORARI
-      </a>
+  <img src="/wp-content/uploads/fotograndeCentro.jpg" />
+
+  <div id="menuicon-bar-container">
+    <div id="menuicon-bar">
+      <div class="menuicon-item">
+        <a href="#">
+          <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_negozi.png" />
+          <br/>NEGOZI
+        </a>
+      </div>
+      <div class="menuicon-item">
+        <a href="#">
+          <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_idee-regalo.png" />
+          <br/>IDEE REGALO
+        </a>
+      </div>
+      <div class="menuicon-item">
+        <a href="#">
+          <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_eventi.png" />
+          <br/>EVENTI
+        </a>
+      </div>
+      <div class="menuicon-item">
+        <a href="#orari">
+          <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_orari.png" />
+          <br/>ORARI
+        </a>
+      </div>
     </div>
   </div>
 </section>
