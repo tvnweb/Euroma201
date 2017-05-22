@@ -30,6 +30,7 @@
   @include breakpoint(medium down) {
     display: none !important;
   }
+  border-top: 1px solid #fff;
   position: relative;
   z-index: 30;
   float: left;
@@ -41,8 +42,9 @@
     font-family: Muli; font-size: 14px;
     font-weight: bold;
   }
-  padding: 0 10%;
+  padding: 0 10% 2px 10%;
   box-shadow: 1px 1px 1px rgba(70,70,70,0.9);
+  .current-menu-item { background-color: #000; a { color: #f1bc26 !important; } }
 }
 
 .lang {
@@ -260,19 +262,27 @@
 
 }
 
+#menuicon-bar-container {
+  width :100%;
+  background-color: #303030;
+}
+
 #menuicon-bar {
   @include grid-row();
-  width :100%;
+  width: 50%;
   height: 90px;
   background-color: #303030;
   .menuicon-item {
     img { height: 64px; }
     padding: 4px 10px !important;
     @include grid-column(3);
+    @include grid-column-collapse();
     a { color: #fff ; font-size: 11px; }
     line-height: 5px;
   }
 }
+
+
 
 .top-links {
 

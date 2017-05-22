@@ -51,7 +51,7 @@
 		<button class="close-button" data-close="" aria-label="Close modal" type="button">
     	<span aria-hidden="true">×</span>
   	</button>
-  	<iframe id="mapframe" src="/euroma2/mappa/docs/mappa1.php?lang=it&amp;piano=1" width="830" height="515" frameborder="0"></iframe>
+  	<iframe id="mapframe" src="/mappa/docs/mappa1.php?lang=it&amp;piano=1" width="830" height="515" frameborder="0"></iframe>
 	</div>
 
 	<header id="masthead" class="site-header" data-sticky-container>
@@ -87,7 +87,7 @@
 				</div>
 
 				<div class="lang">
-					<img src="http://localhost/euroma2/wp-content/plugins/qtranslate-x/flags/it.png" alt="ITA" />
+					<img src="/wp-content/plugins/qtranslate-x/flags/it.png" alt="ITA" />
 					<?php /*wp_nav_menu(array('menu' => 'Lingua'));*/ ?>
 					<!--img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/flag_ita.gif" /-->
 
@@ -135,16 +135,3 @@
 
 
 		</header>
-		<!-- Banner page interne (solo per medium e large) -->
-<?php if ( !is_front_page() && !is_home() ) { ?>
-		<section id="banner-interne">
-			<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-				<ul class="orbit-container">
-					  <li class="is-active orbit-slide">
-							<img class="orbit-image" data-interchange="[<?php echo get_bloginfo('template_url'); ?>/images/gp30/interne.jpg, small], [<?php echo get_bloginfo('template_url'); ?>/images/gp30/interne.jpg, medium], [<?php echo get_bloginfo('template_url'); ?>/images/gp30/interne.jpg, large], [<?php echo get_bloginfo('template_url'); ?>/images/gp30/interne.jpg, xlarge]">
-						</li>
-				</ul>
-			</div>
-		</section>
-
-<?php } ?>
