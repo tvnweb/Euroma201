@@ -1,6 +1,6 @@
 .griglia{
   @include grid-row();
-  margin-top: 50px;
+  padding: 35px 0;
   h2{
     text-align: center;
     text-transform: uppercase;
@@ -12,8 +12,12 @@
     float: left;
     padding: 5px !important;
     border: 1px solid #000000;
+    overflow: hidden;
     img {
         width: 100%;
+        transition: all 0.5s ease;
+        &:hover { transform:scale(1.22); }
     }
+
   }
 }
