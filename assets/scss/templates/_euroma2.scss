@@ -2,7 +2,8 @@ body{background-color:$white;}
 p{margin: 0 !important;}
 section { text-align: center; font-family: 'Muli'; }
 .testo{padding: 2% 0}
-h3{font-family: 'Muli'; font-size: 1.2em; text-transform: uppercase; font-weight: 800; }
+h2{font-family: 'Muli'; font-size: 1.5em; text-transform: uppercase; font-weight: 700; }
+h3{font-family: 'Muli'; font-size: 1.3em; text-transform: uppercase; font-weight: 800; }
 .testo p{
     font-family: 'Muli';
     text-transform:inherit;
@@ -193,6 +194,16 @@ li.blurImg img {
     font-size: 13px;
     b { text-transform: uppercase; }
     b,i,p { float: left;  clear: left;  margin: 4px !important; }
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
   }
 }
+
+.newsbox {
+  .newsthumb { float: left; width: 200px; margin: 14px 14px 14px 0; }
+  .newsinfo { float: left; width: 70%; font-family: Muli; font-size: 16px;
+    b,span,p { float: left; clear: left;}
+    span,p { margin-top: 17px; }
+  }
+}
+
+.infos { padding: 0 24px; p { font-size: 16px; } }
