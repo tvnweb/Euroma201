@@ -195,8 +195,51 @@ li.blurImg img {
     b { text-transform: uppercase; }
     b,i,p { float: left;  clear: left;  margin: 4px !important; }
     margin-bottom: 25px;
+
+    .caption{
+                 display: none;
+                 position: absolute;
+                 top: 0;
+                 left: 0;
+                 background: url(../../assets/img/pixel3.png);
+                 width: 100%;
+                 height: 100%;
+                 padding: 8%;
+
+                 h3{
+                   font-weight: 900;
+                   color: #ffffff;
+                   font-size: 1.8em;
+                   position: relative;
+                   top: 20%;
+                   text-align: center;
+                   text-transform: uppercase;
+                 }
+                 h4{
+                   font-size: 1.2em;
+                   top: 25%;
+                   color:#cfb63a;
+                   position: relative;
+                   font-weight: bold;
+                   text-transform: uppercase;
+                   text-align: center;
+                 }
+                 p{
+                   top: 25%;
+                   font-size: 1em;
+                   position: relative;
+                   color: #ffffff;
+                   a{
+                     color: #ffffff;
+                   }
+                 }
+               }
+
+
+
   }
 }
+
 
 .newsbox {
   .newsthumb { float: left; width: 200px; margin: 14px 14px 14px 0; }
