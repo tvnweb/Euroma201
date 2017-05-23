@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row">
 			<?php
-			$promo_args = array('post_type' => 'promozioni','cat'=> 418, 'posts_per_page' => 100, 'orderby' => 'rand');
+			$promo_args = array('post_type' => 'promozioni','cat'=> 418, 'posts_per_page' => 100);
 			$promozioni = new WP_Query($promo_args);
 
 			while($promozioni->have_posts()) : $promozioni->the_post();
@@ -27,7 +27,7 @@
 
 
 			?>
-			<div class="small-2 medium-3 large-4">
+			<div class="small-6 medium-4 large-3">
 				  <div class="promo">
 				<a href="<?php echo $link; ?>">
 				<?php the_post_thumbnail('eventi'); ?>

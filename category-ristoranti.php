@@ -21,11 +21,12 @@
 <!--h2><?php echo get_cat_name(3);?></h2-->
 <?php
   $args = array(
-  'cat' => 3,
   'post_type' => 'post',
-  'order' => 'DESC',
-  'posts_per_page' => 300
+  'cat' => 20,
+  'posts_per_page' => 12
 );
+
+$cnt = 0;
 
 $the_query = new WP_Query( $args );
 
@@ -35,11 +36,19 @@ $the_query = new WP_Query( $args );
      $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
     ?>
       <div class="griglia-negozi" >
-        <a href="<?php get_the_permalink(); ?>">
+        <a href="<?php the_permalink(); ?>">
         <img src="<?php echo $url ?>" />
       </a>
       </div>
+
       <?php
+      $cnt++;
+      //echo $cnt . "(".$cnt%12.")";
+      if(($cnt % 12) == 0) {
+        echo do_shortcode('[ajax_load_more container_type="div" offset="12" css_classes="griglia" post_type="post" posts_per_page="12" category="ristoranti" pause="true" scroll_distance="50" pause_override="true" transition="fade" images_loaded="true"]');
+      }
+
+
     endwhile;
   endif;
 

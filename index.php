@@ -18,7 +18,6 @@ get_header(); ?>
 <section id="hp">
 
   <img src="/wp-content/uploads/fotograndeCentro.jpg" />
-
   <div id="menuicon-bar-container">
     <div id="menuicon-bar">
       <div class="menuicon-item">
@@ -133,7 +132,7 @@ get_header(); ?>
     <div class="carousel">
       <div class="single-slide slider">
     <?php
-    $news_args = array('post_type' => 'news','cat' => '414', 'posts_per_page' => 7,'orderby' => 'date');
+    $news_args = array('post_type' => 'news','cat' => '414', 'posts_per_page' => 100, 'orderby' => 'date');
     $news = new WP_Query($news_args);
 
     while($news->have_posts()) : $news->the_post();

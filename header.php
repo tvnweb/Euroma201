@@ -92,7 +92,7 @@
 					<!--img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/flag_ita.gif" /-->
 
 <!--ul class="vertical menu" data-accordion-menu>
-	<li><a title="ITA" href="?lang=it"><img src="http://localhost/euroma2/wp-content/plugins/qtranslate-x/flags/it.png" alt="ITA"></a></li>
+	<li><a title="ITA" href="?lang=it"><img src="http://</euroma2/wp-content/plugins/qtranslate-x/flags/it.png" alt="ITA"></a></li>
 	<li style="display:none"><a title="ENG" href="?lang=en"><img src="http://localhost/euroma2/wp-content/plugins/qtranslate-x/flags/gb.png" alt="ENG"></a></li>
 	<li style="display:none"><a title="FRA" href="?lang=fr"><img src="http://localhost/euroma2/wp-content/plugins/qtranslate-x/flags/fr.png" alt="FRA"></a></li>
 </ul-->
