@@ -248,3 +248,17 @@ $(document).ready(function() {
       $(".case-history").eq(idx).toggle(300);
   });
 });
+
+
+/*Roll-hover immagini*/
+$(document).ready(function() {
+  $('.promo').hover(
+    function(){
+
+      $(this).find('.caption').fadeIn(350);
+    },
+    function(){
+      $(this).find('.caption').fadeOut(200);
+    }
+  );
+});
