@@ -31,17 +31,12 @@
 				  <div class="promo">
 						<a href="<?php echo $link; ?>">
 						<?php the_post_thumbnail('eventi'); ?>
-						</a>
 						<div class="caption">
-							<!--b></b-->
-							<!--i>Dal <?php echo $data_inizio;?> al <?php echo $data_fine;?></i-->
-							<!--p><?php echo $desc; ?></p-->
-
 							<h3><?php echo $titolo; ?></h3>
 							<h4>Dal <?php echo $data_inizio;?> al <?php echo $data_fine;?></h4>
 							<p><?php echo $desc; ?></p>
 						</div>
-
+						</a>
 				</div>
 			</div>
 
