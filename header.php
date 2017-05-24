@@ -72,7 +72,7 @@
 							<img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/logo.png" />
 						</a>
 						<span class="top-links">
-							<a href="#">Info</a>
+							<a href="servizi">Servizi</a>
 							<a href="newsletter">Newsletter</a>
 						</span>
 						<span class="orario">
@@ -99,9 +99,15 @@
 
 				</div>
 
-				<div class="search hide-for-large-down">
-					<input type="text" name="search-string" placeholder="cerca negozio" />
-					<i class="fa fa-search"></i>
+				<div class="ricerca hide-for-large-down">
+					<form name="cerca" role="search" method="get" id="searchform" action="/">
+						<input type="hidden" name="cat" value="20,3">
+					<input type="text" name="s" id="s" placeholder="cerca negozio" />
+
+					<i class="fa fa-search" id="searchsubmit" onclick="document.cerca.submit()"></i>
+				</form>
+
+
 				</div>
 
 				<div class="socials hide-for-large-down">

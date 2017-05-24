@@ -189,8 +189,8 @@ li.blurImg img {
   .promo {
     float: left;
     position: relative;
-    img { border: 1px solid #888;
-    box-shadow: 3px 3px 1px #888; }
+    margin: 3px; 
+    img { border: 1px solid #888; }
     font-size: 13px;
     b { text-transform: uppercase; }
     b,i,p { float: left;  clear: left;  margin: 4px !important; }
