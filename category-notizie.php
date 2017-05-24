@@ -2,7 +2,7 @@
 
 
 	<div class="container">
-		<div class="row">
+		<div class="row columns">
 			<?php
 			$news_args = array('post_type' => 'news','cat' => '414', 'posts_per_page' => 7, 'orderby' => 'date');
 			$news = new WP_Query($news_args);

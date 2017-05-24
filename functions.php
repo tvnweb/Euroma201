@@ -184,6 +184,24 @@ function custom_post() {
           			)
           		);
 
+              register_post_type( 'servizi', /* nome del custom post type */
+              // aggiungiamo ora tutte le impostazioni necessarie, in primis definiamo le varie etichette mostrate nei menù
+                array('labels' => array(
+                    'name' => 'Servizi', /* Nome, al plurale, dell'etichetta del post type. */
+                    'singular_name' => 'Servizio', /* Nome, al singolare, dell'etichetta del post type. */
+                    'all_items' => 'Tutti i servizi', /* Testo mostrato nei menu che indica tutti i contenuti del post type */
+                    'add_new' => 'Aggiungi nuovo', /* Il testo per il pulsante Aggiungi. */
+                    'add_new_item' => 'Aggiungi nuovo servizio', /* Testo per il pulsante Aggiungi nuovo post type */
+                    'edit_item' => 'Modifica Servizio', /*  Testo per modifica */
+                    'new_item' => 'Nuovo Servizio' /* Testo per nuovo oggetto */
+                  ), /* Fine dell'array delle etichette */
+                    'description' => 'Elenco Servizi', /* Una breve descrizione del post type */
+                    'public' => true, /* Definisce se il post type sia visibile sia da front-end che da back-end */
+                    /* la riga successiva definisce quali elementi verranno visualizzati nella schermata di creazione del post */
+                    'supports' => array( 'title','excerpt', 'custom-fields','sticky')
+                ) /* fine delle opzioni */
+              ); /* fine della registrazione */
+
 }
 
 // Inizializzazione della funzione

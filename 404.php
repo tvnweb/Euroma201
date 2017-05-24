@@ -9,8 +9,8 @@
 get_header(); ?>
 
 <div class="container" role="main">
-<div class="row">
-	<div class="small-12 columns" >
+<div class="row columns">
+	<div class="small-12 " >
 		<br/><br/>
 		<div class="mex">
 			<h3>La pagina cercata non esiste.</h3>

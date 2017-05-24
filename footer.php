@@ -10,7 +10,7 @@
 
 ?>
 
-		</section>
+	
 		<div id="footer-container">
 			<footer id="footer">
 				<div class="footer-colonna">
