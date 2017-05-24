@@ -21,7 +21,7 @@
 				if($today <= $data_out ) :
 					$titolo= get_the_title();
 					$desc= get_the_content();
-					
+
 
 					$desc= get_the_content();
 					$data_in = get_post_meta($post->ID, 'data_inizio', true);
@@ -35,9 +35,14 @@
 			?>
 			<div class="small-6 medium-4 large-3">
 				  <div class="promo">
-				<a href="<?php echo $link; ?>">
-				<?php the_post_thumbnail('eventi'); ?>
-				</a>
+						<a href="<?php echo $link; ?>">
+						<?php the_post_thumbnail('eventi'); ?>
+						<div class="caption">
+							<h3><?php echo $titolo; ?></h3>
+							<h4>Dal <?php echo $data_inizio;?> al <?php echo $data_fine;?></h4>
+							<p><?php echo $desc; ?></p>
+						</div>
+						</a>
 				</div>
 			</div>
 
@@ -77,9 +82,14 @@
 			?>
 			<div class="small-6 medium-4 large-3">
 				  <div class="promo">
-				<a href="<?php echo $link; ?>">
-				<?php the_post_thumbnail('eventi'); ?>
-				</a>
+						<a href="<?php echo $link; ?>">
+						<?php the_post_thumbnail('eventi'); ?>
+						<div class="caption">
+							<h3><?php echo $titolo; ?></h3>
+							<h4>Dal <?php echo $data_inizio;?> al <?php echo $data_fine;?></h4>
+							<p><?php echo $desc; ?></p>
+						</div>
+						</a>
 				</div>
 			</div>
 
