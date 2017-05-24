@@ -114,7 +114,27 @@ function custom_post() {
       ); /* fine della registrazione */
 
 
-
+//Rassegna
+/*Post type: CLAIM*/
+  register_post_type( 'rassegna', /* nome del custom post type */
+  // aggiungiamo ora tutte le impostazioni necessarie, in primis definiamo le varie etichette mostrate nei menù
+    array('labels' => array(
+        'name' => 'Rassegna', /* Nome, al plurale, dell'etichetta del post type. */
+        'singular_name' => 'Rassegna', /* Nome, al singolare, dell'etichetta del post type. */
+        'all_items' => 'Tutte le Rassegne', /* Testo mostrato nei menu che indica tutti i contenuti del post type */
+        'add_new' => 'Aggiungi nuovo', /* Il testo per il pulsante Aggiungi. */
+        'add_new_item' => 'Aggiungi una nuova Rassegna', /* Testo per il pulsante Aggiungi nuovo post type */
+        'edit_item' => 'Modifica Rassegna', /*  Testo per modifica */
+        'new_item' => 'Nuovo Rassegna' /* Testo per nuovo oggetto */
+      ), /* Fine dell'array delle etichette */
+        'description' => 'Elenco Rassegne', /* Una breve descrizione del post type */
+        'menu_icon' => get_stylesheet_directory_uri() . '/assets/img/icons/press.png', /* Scegli l'icona da usare nel menù per il posty type */
+        'public' => true, /* Definisce se il post type sia visibile sia da front-end che da back-end */
+        /* la riga successiva definisce quali elementi verranno visualizzati nella schermata di creazione del post */
+        'supports' => array( 'title','excerpt', 'custom-fields','sticky'),
+        'taxonomies' => array('category', 'post_tag')
+    ) /* fine delle opzioni */
+  ); /* fine della registrazione */
 
 
 
