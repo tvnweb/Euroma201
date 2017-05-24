@@ -37,14 +37,19 @@
   clear: both;
   width: 100%;
   background-color: #fff;
+  li { padding: 1px; }
   a {
     color: #000;
     font-family: Muli; font-size: 14px;
     font-weight: bold;
+    transition: all 0.5s linear;
+    &:hover {
+      background-color: #000; color: #f1bc26 !important;
+    }
   }
   padding: 0 10% 2px 10%;
   box-shadow: 1px 1px 1px rgba(70,70,70,0.9);
-  .current-menu-item { background-color: #000; a { color: #f1bc26 !important; } }
+  .current-menu-item, .current-menu-parent { background-color: #000; a { color: #f1bc26 !important; } }
 }
 
 .lang {
@@ -66,7 +71,7 @@
 
 }
 
-.search {
+.ricerca {
   margin: 14px 0 0 30px;
   float: right; font-family: Muli;
   white-space: nowrap;

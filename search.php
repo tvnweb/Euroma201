@@ -1,52 +1,33 @@
 <?php
 /**
- * The template for displaying search results pages.
+ * The template for displaying pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages and that
+ * other "pages" on your WordPress site will use a different template.
  *
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
 
-get_header(); ?>
+ get_header(); ?>
 
-<div id="page" role="main">
+<div class="griglia">
 
-<?php do_action( 'foundationpress_before_content' ); ?>
+		<?php if ( have_posts() ) : ?>
+    <?php while ( have_posts() ) : the_post();
+     $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+    ?>
+      <div class="griglia-negozi" >
+        <a href="<?php the_permalink(); ?>">
+        <img src="<?php echo $url ?>" />
+      </a>
+      </div>
 
-<article <?php post_class('main-content') ?> id="search-results">
-	<header>
-	    <h1 class="entry-title"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h1>
-	</header>
-
-	<?php if ( have_posts() ) : ?>
-
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-		<?php endwhile; ?>
-
-		<?php else : ?>
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-	<?php endif; ?>
-
-	<?php do_action( 'foundationpress_before_pagination' ); ?>
-
-	<?php
-	if ( function_exists( 'foundationpress_pagination' ) ) :
-		foundationpress_pagination();
-	elseif ( is_paged() ) :
-	?>
-
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-		</nav>
-	<?php endif; ?>
-
-</article>
-
-<?php do_action( 'foundationpress_after_content' ); ?>
-<?php get_sidebar(); ?>
-
-</div>
-
-<?php get_footer();
+    <?php
+			endwhile;
+			endif;
+		?>
+ </div>
+ 
+ <?php get_footer();
