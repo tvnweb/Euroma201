@@ -10,7 +10,7 @@
 
 ?>
 
-	
+
 		<div id="footer-container">
 			<footer id="footer">
 				<div class="footer-colonna">
@@ -46,7 +46,7 @@
 					<b>AREA RISERVATA</b>
 					<hr>
 					<ul class="vertical menu">
-						<li><a href="#">Accedi</a></li>
+						<li><a href="/area-riservata">Accedi</a></li>
 					</ul>
 
 				</div>

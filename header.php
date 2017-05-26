@@ -138,6 +138,18 @@
 			<div id="mainmenu-bar">
 				<?php foundationpress_top_bar_r(); ?>
 			</div>
+			<div class="submenu">
+				<?php
+				if(is_page(array( 'negozi','abbigliamento','calzature-accessori','casa-e-tempo-libero','cura-della-persona', 'ipermercato', 'preziosi-e-regalistica' ))){
+					wp_nav_menu( array(
+							'menu' => 'BOUTIQUES'
+					) );
+				}  elseif(is_page(array('ristoranti','servizio-al-tavolo','snack-bar-e-gelaterie','servizio-veloce'))){
+					wp_nav_menu( array(
+							'menu' => 'Ristorante'
+					) );
+				}
+				?>
 
-
+			</div>
 		</header>

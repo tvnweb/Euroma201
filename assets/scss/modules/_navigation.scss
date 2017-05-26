@@ -49,8 +49,36 @@
   }
   padding: 0 10% 2px 10%;
   box-shadow: 1px 1px 1px rgba(70,70,70,0.9);
-  .current-menu-item, .current-menu-parent { background-color: #000; a { color: #f1bc26 !important; } }
+  .current-menu-item, .current-menu-parent { background-color: #000; a { color: #f1bc26 !important; background-color: #000000 !important;} }
 }
+
+.submenu{
+
+  background-color: #ffffff;
+  padding: 3% 0 ;
+  ul#menu-boutiques, ul#menu-ristorante{
+    width: 1200px;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 5%;
+    li{
+      a{
+       color: #000000;
+       text-transform: uppercase;
+       font-weight: bold;
+       font-size: 0.8em;
+       transition: all 0.5s linear;
+     }
+     a:hover {
+       background-color: #000; color: #f1bc26 !important;
+     }
+    }
+    .current-menu-item, .current-menu-parent
+    { background-color: #000; a { color: #f1bc26 !important; background-color: #000000 !important;} }
+  }
+}
+
 
 .lang {
   margin: 23px;

@@ -1,6 +1,6 @@
 .griglia{
   @include grid-row();
-  padding: 35px 0;
+  padding: 5% 2%;
   h2{
     text-align: center;
     text-transform: uppercase;
@@ -8,8 +8,17 @@
   }
 
 .griglia-negozi {
+@include breakpoint(small) {
+  @include grid-column(6);
+}
+@include breakpoint(medium) {
+  @include grid-column(4);
+}
+@include breakpoint(large) {
   @include grid-column(3);
-    float: left;
+}
+
+    float: left !important;
     padding: 5px !important;
     border: 1px solid #000000;
     overflow: hidden;
