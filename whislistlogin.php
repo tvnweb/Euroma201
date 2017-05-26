@@ -10,43 +10,43 @@
                         <ul class="elenco_wishlist">
                             <?php  $i=0; foreach($obj as $o){?>
                                 <li>
-                                <?php 
+                                <?php
 									if ($o['numprodotti']>0)
 										$cliccabile='class="view wishlist" id="wishlists_'.$o['id'].'"';
 									else
 										 $cliccabile='style="cursor:default;"';
 								?>
-                                <span <?php echo $cliccabile; ?>><?php echo $o['nome']; ?></span>	
-                                
+                                <span <?php echo $cliccabile; ?>><?php echo $o['nome']; ?></span>
+
                                  <span class="destra">(<?php echo $o['numprodotti'];?>)</span></li>
                             <?php $i++;}?>
                         </ul>
-                       <?php 
+                       <?php
 					  	 include('wishlist-new.php');
 					   }
 						?>
                         <a href="#" id="logoutgiallo" class="logoutgiallo">
-                        <?php echo (qtrans_getLanguage()==fr)?'Déconnexion':'Logout'; ?></a>
+                        <?php echo (qtranxf_getLanguage()==fr)?'Déconnexion':'Logout'; ?></a>
                         <?php } else {?>
                         <!-- SE NON SONO LOGGATO -->
                         <div class="tit_login">
-                        <?php if(qtrans_getLanguage()==fr){ ?>			 
+                        <?php if(qtranxf_getLanguage()==fr){ ?>
                     	Pour <br /><span>sauver</span><br />votre <strong>wishlist</strong>, connectez-vous<br />con i tuoi avec vos informations de connexions sur le site internet <strong>Euroma2.it</strong></div>
-                        <?php } else if(qtrans_getLanguage()==en){
+                        <?php } else if(qtranxf_getLanguage()==en){
 ?>			 			<br /><span>To save</span><br />your <strong>wishlists</strong>, sign in<br />to the website <strong>Euroma2.it</strong><br />with your credentials</div>
 						<?php } else { ?>
                         	Per poter<br /><span>salvare</span><br />le tue <strong>wishlist</strong>, devi accedere<br />con i tuoi dati al sito <strong>Euroma2.it</strong></div>
                         <?php } ?>
                         	<input type="text" id="email" value="" placeholder="email"/>
                             <!--<input type="text" id="fakeEmailLogin" value="email"/>
-                        	
+
                             <input type="text" id="fakePasswordLogin" value="password" />-->
                             <input type="password" id="password" value="" placeholder="password" />
                        		<div id="loginUtente" class="loginUtente"><?php _e(utf8_encode($lang_accediwl)); ?></div>
-                        
+
                             <div id="menuLogin"><?php /*?><a href="#" onclick="javascript:return false;"><?php strtoupper(_e($lang_registrati));?></a><?php */?><a href="#" class="reg_tablet"><?php strtoupper(_e(utf8_encode($lang_registratiwl)));?></a></div>
-                           
-                            
+
+
                		<div id="facebookLogin">
                         <!-- <a href="<?php echo $loginUrl;?>" /><img src="<?php bloginfo("template_url");?>/images/facebook_login.jpg"></a> -->
                     </div>

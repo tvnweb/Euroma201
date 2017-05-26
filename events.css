@@ -1,0 +1,349 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+#content.container_12 h1{
+	width:100%;
+	font-family: 'Open Sans';
+	font-weight:bold;
+	font-size:12px;
+	padding:0 0 15px;
+	color:#fff;
+	text-align:left;
+	text-transform:uppercase;
+	margin:0;
+}
+
+#content.container_12 h1.past{
+
+	padding:15px 0 15px;
+
+}
+
+.list_news.eventi_2015 {
+    border-bottom: 1px solid #494949;
+    border-top: 1px solid #494949;
+    float: left;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.list_news.eventi_2015.past {
+    border-bottom: none;
+}
+
+.list_news.eventi_2015.single {
+	border-bottom:none;
+}
+
+.list_news.eventi_2015 > a {
+    display: block;
+    float: left;
+    margin: 1px;
+    width: 33%;
+}
+
+
+.img_eventi {
+    display: block;
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.news_destra > span {
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 14px;
+}
+
+
+#content.container_12 h1.single_news {
+    color: #f1bc29;
+    font-family: 'open sans';
+    font-size: 14px;
+    padding: 10px 0 10px;
+}
+
+.news_destra {
+	margin:0;
+}
+
+.news_destra > p {
+    color: #fff;
+    font-family: "open sans";
+    font-size: 14px;
+    line-height: 21px;
+	margin:0;
+}
+
+.news_destra > p a {
+    color: #f1bc29;
+	text-decoration:none;
+}
+
+
+#inEvidenza.news_sinistra.news2105 {
+    display: inline;
+    float: left;
+
+}
+
+#inEvidenza > img {
+	display: block;
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+
+#content.container_12 h1.subtitle {
+    font-family: "open sans";
+    font-size: 1em;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: capitalize;
+	color:#939393;
+	font-weight: 400;
+}
+
+#content.container_12 h1.subtitle a{
+	color:#939393;
+	text-decoration:none;
+}
+
+#content.container_12 h1.subtitle a.sel{
+	color:#f1bc29;
+}
+
+#content.container_12 h1.subtitle a:hover{
+	color:#f1bc29;
+}
+
+/*PROMO*/
+
+.cella.promozioni {
+    display: block;
+    float: left;
+	margin-left:1px;
+    margin-bottom: 2%;
+    width: 33%;
+}
+
+.contenuti_promo{
+	text-align:left;
+	/*height: 385px;*/
+	background-color: #1b1b1b;
+	width: 100%;
+}
+
+.contenuti_promo p.promo_info{
+	font-family: 'Open sans';
+	font-weight: normal;
+	color:#fff;
+	font-size: 10px;
+	padding: 3px 0;
+}
+
+.contenuti_promo p.promo_info.data{
+	font-style:italic;
+	font-size: 12px;
+	padding-bottom:3px;
+}
+
+.contenuti_promo p.promo_info.titolo {
+    color: #f1bc29;
+    /*font-size: 1.3em;*/
+	font-size:14px;
+    text-transform: uppercase;
+	padding:5px 0;
+}
+
+.contenuti_promo p.promo_info.desc{
+	line-height:15px;
+	font-size: 12px;
+	/*height: 45px;*/
+}
+
+.contenuti_promo p.promo_info a{
+	color:#939393;
+	text-decoration:none;
+}
+
+.contenuti_promo p.promo_info a:hover{
+	color:#f1bc29;
+}
+
+p.data_promozioni{
+	color:#fff;	
+	font-size:14px;
+	font-family:'Open sans';
+}
+
+p.piano{
+	padding-bottom:5px;
+	color:#939393;
+}
+
+@media screen and (min-width:320px) {
+
+
+.list_news.eventi_2015 > a {
+	margin-left:5%;
+    width: 90%;
+}	
+
+
+.cella.promozioni {
+	margin-left:5%;
+    width: 90%;
+}
+
+#inEvidenza.news_sinistra.news2105 > a{
+
+	margin-left:5%;
+    width: 90%;
+	
+}
+		
+.news_destra{ 
+    margin-left: 5%;
+    width: 90%;
+}	
+
+
+.news_destra #video1_wrapper{
+
+	height: 258px;
+    position: relative;
+    width: 100% !important;
+
+}
+
+
+
+/*object {
+    width: 90%;
+}*/
+
+#content.container_12 h1.subtitle {
+    font-size: 0.8em;
+}
+
+
+#content.container_12 h1.promo_info{
+    font-size: 0.8em;
+		
+}
+
+.contenuti_promo p.promo_info.desc{
+	/*height: 25px;*/
+}
+
+
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+	
+.list_news.eventi_2015 > a {
+    margin-left: 4%;
+    width: 44%;
+}	
+
+.cella.promozioni {
+    margin-left: 4%;
+    width: 44%;
+}
+
+/*object {
+    width: 90%;
+}*/
+
+
+
+.contenuti_promo {
+
+    height: 485px;
+
+}
+	
+#content.container_12 h1.subtitle {
+    font-size: 0.9em;
+
+}
+	
+#content.container_12 h1.promo_info{
+    font-size: 0.9em;
+		
+}
+
+.contenuti_promo p.promo_info.desc{
+
+	/*height: 45px;*/
+}
+
+
+
+	
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+
+.list_news.eventi_2015 > a {
+
+    display: block;
+    float: left;
+    margin: 1px;
+    width: 33%;
+}
+
+
+.cella.promozioni {
+    display: block;
+	margin: 1px;
+    float: left;
+    margin-bottom: 2%;
+    width: 33%;
+}
+	
+#inEvidenza.news_sinistra.news2105 {
+    display: inline;
+    float: left;
+
+}	
+
+/*object{
+	width:460px;
+	height:258px;
+	
+}*/
+
+.contenuti_promo {
+    height: 430px;
+}
+
+#content.container_12 h1.subtitle {
+   /* font-size: 1em;*/
+   font-size:14px;
+
+}
+
+#content.container_12 h1.promo_info{
+
+    font-size: 1em;
+		
+}
+
+
+.contenuti_promo p.promo_info.desc{
+	/*height: 27px;*/
+}
+
+}

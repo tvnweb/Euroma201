@@ -8,6 +8,36 @@
  * @since FoundationPress 1.0.0
  */
 
+$loginUrl="";
+	include("language.php");
+	global $lang;
+	$lang=$_GET['ln'];
+	 if($_SESSION['logged']!=1){
+
+
+			  include ('libFacebook/facebook.php');
+
+		// Create our Application instance (replace this with your appId and secret).
+		$facebook = new Facebook(array(
+		  'appId'  => FB_LOGIN_APP_ID,
+		  'secret' => FB_LOGIN_APP_SECRET,
+		));
+		$user = $facebook->getUser();
+
+		if ($user) {
+			$logoutUrl = $facebook->getLogoutUrl();
+			$loginUrl = $facebook->getLoginUrl(array('scope' => 'email,user_birthday'));
+			try{
+				$user_profile = $facebook->api('/me?fields=birthday,first_name,last_name,email,gender');
+				my_registration_fb_callback($user_profile);
+			}catch(Exception $e){}
+		} else {
+			$statusUrl = $facebook->getLoginStatusUrl();
+			$loginUrl = $facebook->getLoginUrl(array('scope' => 'email,user_birthday'));
+		 }
+	}
+
+
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
@@ -17,6 +47,9 @@
 		<meta name="author" content="Development: Di Giorgio Mattia, Alessandro Bassi - Graphic Design: Lorenzo Previati">
 		<?php wp_head(); ?>
 
+		<link rel="stylesheet" type="text/css" href="/wp-content/themes/Euroma2-2017/euroma2.css" />
+		<link rel="stylesheet" type="text/css" href="/wp-content/themes/Euroma2-2017/events.css" />
+		<link rel="stylesheet" type="text/css" href="/wp-content/themes/Euroma2-2017/contenuti.css" />
 
 	</head>
 	<body <?php body_class(); ?>>
@@ -72,8 +105,8 @@
 							<img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/logo.png" />
 						</a>
 						<span class="top-links">
-							<a href="servizi">Servizi</a>
-							<a href="newsletter">Newsletter</a>
+							<a href="/servizi">Servizi</a>
+							<a href="/newsletter">Newsletter</a>
 						</span>
 						<span class="orario">
 							<b>Apertura centro</b><br/>
