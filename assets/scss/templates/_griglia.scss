@@ -1,6 +1,6 @@
 .griglia{
   @include grid-row();
-  padding: 5% 2%;
+  padding: 5% 0;
   h2{
     text-align: center;
     text-transform: uppercase;
