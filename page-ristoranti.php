@@ -22,55 +22,38 @@
 
 switch ($post->post_name){
   case 'ristoranti':
-  $args = array(
-  'cat' => 20,
-  'orderby' => 'title',
-  'order'   => 'ASC',
-  'post_type' => 'post',
-  'category__not_in' => array( 3 ),
-  'posts_per_page' => 100
-);
+    $catid = 20;
     break;
 
 
     case 'servizio-al-tavolo':
-    $args = array(
-    'cat' => 21,
-    'orderby' => 'title',
-    'order'   => 'ASC',
-    'post_type' => 'post',
-    'posts_per_page' => 100
-  );
+    $catid = 21;
     break;
 
 
     case 'servizio-veloce':
-    $args = array(
-    'cat' => 24,
-    'orderby' => 'title',
-    'order'   => 'ASC',
-    'post_type' => 'post',
-    'posts_per_page' => 100
-  );
+    $catid = 24;
     break;
 
 
 
     case 'snack-bar-e-gelaterie':
-    $args = array(
-    'cat' => 23,
-    'orderby' => 'title',
-    'order'   => 'ASC',
-    'post_type' => 'post',
-    'posts_per_page' => 100
-  );
+    $catid = 23;
     break;
 
   } //chiusura Switch
 
 
-  $cnt = 0;
 
+  $args = array(
+  'cat' => $catid,
+  'post_type' => 'post',
+  'category__not_in' => 3,
+  'posts_per_page' => 12
+);
+
+
+  $cnt = 0;
   $the_query = new WP_Query( $args );
 
 
@@ -83,10 +66,14 @@ switch ($post->post_name){
           <img src="<?php echo $url ?>" />
         </a>
         </div>
-
         <?php
         $cnt++;
         //echo $cnt . "(".$cnt%12.")";
+        if(($cnt % 12) == 0) {
+          echo do_shortcode('[ajax_load_more container_type="div" offset="12" css_classes="griglia" post_type="post" posts_per_page="12" category__not_in="3" category="'.$catid.'" order="ASC" orderby="title" pause="true" pause_override="true" transition="fade" images_loaded="true"]');
+
+
+        }
       endwhile;
     endif;
 
