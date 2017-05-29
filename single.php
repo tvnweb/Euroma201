@@ -21,6 +21,7 @@ if ( (in_category('veloce', $post->ID)) || (in_category('ris_tavolo', $post->ID)
 
 ?>
 
+<p>prova</p>
 
 <div id="single-post" role="main">
 
