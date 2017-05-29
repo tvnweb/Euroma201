@@ -1,0 +1,52 @@
+.single-store{
+  @include grid-row();
+  padding: 5% 2% 1%;
+
+  .blocco1{
+    @include breakpoint(small) {
+      @include grid-column(12);
+    }
+    @include breakpoint(medium) {
+      @include grid-column(12);
+    }
+    @include breakpoint(large) {
+      @include grid-column(6);
+    }
+    .interno1{
+      @include grid-column(6);
+      img{
+        border: 1px solid #000000;
+      }
+    }
+    .interno2{
+      @include grid-column(6);
+      h4{text-transform: uppercase;}
+      p.info{text-transform:lowercase;; font-size: 0.9em; font-weight: bold; padding-bottom: 5%;}
+      a{color: #000000;}
+      a:hover{text-decoration: underline;}
+    }
+  }
+  .blocco2{
+    @include breakpoint(small) {
+      @include grid-column(12);
+      margin-top: 3% !important;
+    }
+    @include breakpoint(medium) {
+      @include grid-column(12);
+      margin-top: 3% !important;
+    }
+    @include breakpoint(large) {
+      @include grid-column(6);
+      margin-top: 0 !important;
+    }
+  }
+
+}
+
+.description{
+  @include grid-row();
+  padding: 2% 2% 8%;
+  -webkit-column-count: 2;
+   -moz-column-count: 2;
+        column-count: 2;
+}
