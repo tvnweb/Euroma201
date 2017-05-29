@@ -30,34 +30,8 @@ switch ($post->post_name){
   'category__not_in' => array( 3 ),
   'posts_per_page' => 100
 );
+    break;
 
-$cnt = 0;
-
-$the_query = new WP_Query( $args );
-
-
-  if ( $the_query->have_posts() ) :
-    while ( $the_query->have_posts() ) : $the_query->the_post();
-     $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
-    ?>
-      <div class="griglia-negozi" >
-        <a href="<?php the_permalink(); ?>">
-        <img src="<?php echo $url ?>" />
-      </a>
-      </div>
-
-      <?php
-      $cnt++;
-
-
-    endwhile;
-  endif;
-
-
-// Reset Post Data
-wp_reset_postdata();
-
-      break;
 
     case 'servizio-al-tavolo':
     $args = array(
@@ -67,34 +41,9 @@ wp_reset_postdata();
     'post_type' => 'post',
     'posts_per_page' => 100
   );
-
-  $cnt = 0;
-
-  $the_query = new WP_Query( $args );
+    break;
 
 
-    if ( $the_query->have_posts() ) :
-      while ( $the_query->have_posts() ) : $the_query->the_post();
-       $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
-      ?>
-        <div class="griglia-negozi" >
-          <a href="<?php the_permalink(); ?>">
-          <img src="<?php echo $url ?>" />
-        </a>
-        </div>
-
-        <?php
-        $cnt++;
-        //echo $cnt . "(".$cnt%12.")";
-
-      endwhile;
-    endif;
-
-
-  // Reset Post Data
-  wp_reset_postdata();
-
-        break;
     case 'servizio-veloce':
     $args = array(
     'cat' => 24,
@@ -103,33 +52,9 @@ wp_reset_postdata();
     'post_type' => 'post',
     'posts_per_page' => 100
   );
-
-  $cnt = 0;
-
-  $the_query = new WP_Query( $args );
+    break;
 
 
-    if ( $the_query->have_posts() ) :
-      while ( $the_query->have_posts() ) : $the_query->the_post();
-       $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
-      ?>
-        <div class="griglia-negozi" >
-          <a href="<?php the_permalink(); ?>">
-          <img src="<?php echo $url ?>" />
-        </a>
-        </div>
-
-        <?php
-        $cnt++;
-        //echo $cnt . "(".$cnt%12.")";
-
-      endwhile;
-    endif;
-
-
-  // Reset Post Data
-  wp_reset_postdata();
-        break;
 
     case 'snack-bar-e-gelaterie':
     $args = array(
@@ -139,6 +64,10 @@ wp_reset_postdata();
     'post_type' => 'post',
     'posts_per_page' => 100
   );
+    break;
+
+  } //chiusura Switch
+
 
   $cnt = 0;
 
@@ -158,13 +87,18 @@ wp_reset_postdata();
         <?php
         $cnt++;
         //echo $cnt . "(".$cnt%12.")";
-
       endwhile;
     endif;
-        break;
 
-      }
-  ?>
+
+
+
+
+
+  // Reset Post Data
+  wp_reset_postdata();
+
+?>
 
  </div>
  <?php get_footer();

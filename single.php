@@ -8,6 +8,19 @@
 
 get_header(); ?>
 
+<?php
+
+	$negozio = $post->ID;
+
+echo $post->ID;
+
+
+if ( (in_category('veloce', $post->ID)) || (in_category('ris_tavolo', $post->ID))  || (in_category('ris_tavolo', $post->ID))               ) {
+   echo "pipo";
+} else {
+
+?>
+
 
 <div id="single-post" role="main">
 
@@ -39,4 +52,6 @@ get_header(); ?>
 <br/>
 <br/>
 </div>
+<?php } ?>
+
 <?php get_footer();

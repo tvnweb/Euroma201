@@ -70,32 +70,6 @@ wp_reset_postdata();
           'post_type' => 'post',
           'posts_per_page' => 100
         );
-
-        $cnt = 0;
-
-        $the_query = new WP_Query( $args );
-
-
-          if ( $the_query->have_posts() ) :
-            while ( $the_query->have_posts() ) : $the_query->the_post();
-             $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
-            ?>
-              <div class="griglia-negozi" >
-                <a href="<?php the_permalink(); ?>">
-                <img src="<?php echo $url ?>" />
-              </a>
-              </div>
-
-              <?php
-              $cnt++;
-
-            endwhile;
-          endif;
-
-
-        // Reset Post Data
-        wp_reset_postdata();
-
         break;
 
 
@@ -107,34 +81,9 @@ wp_reset_postdata();
     'post_type' => 'post',
     'posts_per_page' => 100
   );
-
-  $cnt = 0;
-
-  $the_query = new WP_Query( $args );
+    break;
 
 
-    if ( $the_query->have_posts() ) :
-      while ( $the_query->have_posts() ) : $the_query->the_post();
-       $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
-      ?>
-        <div class="griglia-negozi" >
-          <a href="<?php the_permalink(); ?>">
-          <img src="<?php echo $url ?>" />
-        </a>
-        </div>
-
-        <?php
-        $cnt++;
-        //echo $cnt . "(".$cnt%12.")";
-
-      endwhile;
-    endif;
-
-
-  // Reset Post Data
-  wp_reset_postdata();
-
-        break;
     case 'preziosi-e-regalistica':
     $args = array(
     'cat' => 7,
@@ -143,33 +92,9 @@ wp_reset_postdata();
     'post_type' => 'post',
     'posts_per_page' => 100
   );
-
-  $cnt = 0;
-
-  $the_query = new WP_Query( $args );
+    break;
 
 
-    if ( $the_query->have_posts() ) :
-      while ( $the_query->have_posts() ) : $the_query->the_post();
-       $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
-      ?>
-        <div class="griglia-negozi" >
-          <a href="<?php the_permalink(); ?>">
-          <img src="<?php echo $url ?>" />
-        </a>
-        </div>
-
-        <?php
-        $cnt++;
-        //echo $cnt . "(".$cnt%12.")";
-
-      endwhile;
-    endif;
-
-
-  // Reset Post Data
-  wp_reset_postdata();
-        break;
     case 'cura-della-persona':
     $args = array(
     'cat' => 8,
@@ -178,29 +103,9 @@ wp_reset_postdata();
     'post_type' => 'post',
     'posts_per_page' => 100
   );
-
-  $cnt = 0;
-
-  $the_query = new WP_Query( $args );
+    break;
 
 
-    if ( $the_query->have_posts() ) :
-      while ( $the_query->have_posts() ) : $the_query->the_post();
-       $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
-      ?>
-        <div class="griglia-negozi" >
-          <a href="<?php the_permalink(); ?>">
-          <img src="<?php echo $url ?>" />
-        </a>
-        </div>
-
-        <?php
-        $cnt++;
-        //echo $cnt . "(".$cnt%12.")";
-
-      endwhile;
-    endif;
-        break;
     case 'casa-e-tempo-libero':
     $args = array(
     'cat' => 9,
@@ -209,29 +114,9 @@ wp_reset_postdata();
     'post_type' => 'post',
     'posts_per_page' => 100
   );
-
-  $cnt = 0;
-
-  $the_query = new WP_Query( $args );
+    break;
 
 
-    if ( $the_query->have_posts() ) :
-      while ( $the_query->have_posts() ) : $the_query->the_post();
-       $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
-      ?>
-        <div class="griglia-negozi" >
-          <a href="<?php the_permalink(); ?>">
-          <img src="<?php echo $url ?>" />
-        </a>
-        </div>
-
-        <?php
-        $cnt++;
-        //echo $cnt . "(".$cnt%12.")";
-
-      endwhile;
-    endif;
-        break;
     case 'ipermercato':
     $args = array(
     'cat' => 12,
@@ -240,30 +125,35 @@ wp_reset_postdata();
     'post_type' => 'post',
     'posts_per_page' => 100
   );
-
-  $cnt = 0;
-
-  $the_query = new WP_Query( $args );
-
-
-    if ( $the_query->have_posts() ) :
-      while ( $the_query->have_posts() ) : $the_query->the_post();
-       $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
-      ?>
-        <div class="griglia-negozi" >
-          <a href="<?php the_permalink(); ?>">
-          <img src="<?php echo $url ?>" />
-        </a>
-        </div>
-
-        <?php
-        $cnt++;
-        //echo $cnt . "(".$cnt%12.")";
-
-      endwhile;
-    endif;
-        break;
+    break;
 }
+
+
+$cnt = 0;
+
+$the_query = new WP_Query( $args );
+
+
+  if ( $the_query->have_posts() ) :
+    while ( $the_query->have_posts() ) : $the_query->the_post();
+     $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+    ?>
+      <div class="griglia-negozi" >
+        <a href="<?php the_permalink(); ?>">
+        <img src="<?php echo $url ?>" />
+      </a>
+      </div>
+
+      <?php
+      $cnt++;
+
+    endwhile;
+  endif;
+
+
+// Reset Post Data
+wp_reset_postdata();
+
 
 ?>
 
