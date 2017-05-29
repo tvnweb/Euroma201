@@ -23,22 +23,26 @@
 switch ($post->post_name){
   case 'ristoranti':
     $catid = 20;
+    $catname ="ristoranti";
     break;
 
 
     case 'servizio-al-tavolo':
     $catid = 21;
+    $catname ="servizio-al-tavolo";
     break;
 
 
     case 'servizio-veloce':
     $catid = 24;
+    $catname ="servizio-veloce";
     break;
 
 
 
     case 'snack-bar-e-gelaterie':
     $catid = 23;
+    $catname ="snack-bar-e-gelaterie";
     break;
 
   } //chiusura Switch
@@ -47,6 +51,7 @@ switch ($post->post_name){
 
   $args = array(
   'cat' => $catid,
+  'category_name' => $catname,
   'post_type' => 'post',
   'category__not_in' => 3,
   'posts_per_page' => 12
@@ -70,7 +75,7 @@ switch ($post->post_name){
         $cnt++;
         //echo $cnt . "(".$cnt%12.")";
         if(($cnt % 12) == 0) {
-          echo do_shortcode('[ajax_load_more container_type="div" offset="12" css_classes="griglia" post_type="post" posts_per_page="12" category__not_in="3" category="'.$catid.'" order="ASC" orderby="title" pause="true" pause_override="true" transition="fade" images_loaded="true"]');
+          echo do_shortcode('[ajax_load_more container_type="div" offset="12" css_classes="griglia" post_type="post" posts_per_page="12" category__not_in="3" category="'.$catname.'" order="ASC" orderby="title" pause="true" pause_override="true" transition="fade" images_loaded="true"]');
 
 
         }
