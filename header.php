@@ -139,7 +139,7 @@
 				<?php foundationpress_top_bar_r(); ?>
 			</div>
 			<?php
-				if(is_page(array( 'negozi','abbigliamento','calzature-accessori','casa-e-tempo-libero','cura-della-persona', 'ipermercato', 'preziosi-e-regalistica' ))){
+				if(is_page(array( 'store','abbigliamento','calzature-accessori','tempo-libero','cura-della-persona', 'ipermercato', 'preziosi-e-regalistica' ))){
 				?>
 			<div class="submenu">
 				<?php
@@ -152,14 +152,14 @@
 
 			</div>
 
-		<?php } elseif(is_page(array('ristoranti','servizio-al-tavolo','snack-bar-e-gelaterie','servizio-veloce'))){ ?>
+		<?php } elseif(is_page(array('ristoranti','ris_tavolo','snack','veloce'))){ ?>
 			<div class="submenu">
 				<?php
 
 					wp_nav_menu( array(
 				 			'menu' => 'Ristorante'
 				 	) );
-			
+
 				?>
 
 			</div>

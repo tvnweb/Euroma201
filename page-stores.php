@@ -38,7 +38,7 @@ switch ($post->post_name){
 
     case 'preziosi-e-regalistica':
     $catid = 7;
-    $catname ="preziosi-e-regalistica";
+    $catname ="preziosi";
     break;
 
     case 'cura-della-persona':
@@ -48,7 +48,7 @@ switch ($post->post_name){
 
     case 'casa-e-tempo-libero':
     $catid = 9;
-    $catname ="casa-e-tempo-libero";
+    $catname ="tempo-libero";
     break;
 
     case 'ipermercato':
@@ -61,10 +61,11 @@ switch ($post->post_name){
 
 $args = array(
   'cat' => $catid,
-  'category_name' => $catname,
   'post_type' => 'post',
-  'category__not_in' => 20,
-  'posts_per_page' => 12
+  'category__not_in' => array(20,21,23,24),
+  'posts_per_page' => 12,
+  'orderby' => 'title',
+  'order' => 'ASC'
 );
 
 
@@ -87,7 +88,7 @@ $the_query = new WP_Query( $args );
       $cnt++;
 
       if(($cnt % 12) == 0) {
-        echo do_shortcode('[ajax_load_more container_type="div" offset="12" css_classes="griglia" post_type="post" posts_per_page="12" category__not_in="20" category="'.$catname.'" order="ASC" orderby="title" pause="true" pause_override="true" transition="fade" images_loaded="true"]');
+        echo do_shortcode('[ajax_load_more container_type="div" offset="12" css_classes="griglia" post_type="post" posts_per_page="12" category__not_in="20,21,23,24" category="'.$catname.'" order="ASC" orderby="title" pause="true" pause_override="true" transition="fade" images_loaded="true"]');
       }
 
     endwhile;
