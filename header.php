@@ -87,7 +87,7 @@
 				</div>
 
 				<div class="lang">
-					<img src="/wp-content/plugins/qtranslate-x/flags/it.png" alt="ITA" />
+					<img src="<?php echo content_url(); ?>/plugins/qtranslate-x/flags/it.png" alt="ITA" />
 					<?php /*wp_nav_menu(array('menu' => 'Lingua'));*/ ?>
 					<!--img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/flag_ita.gif" /-->
 
@@ -139,7 +139,7 @@
 				<?php foundationpress_top_bar_r(); ?>
 			</div>
 			<?php
-				if(is_page(array( 'negozi','abbigliamento','calzature-accessori','casa-e-tempo-libero','cura-della-persona', 'ipermercato', 'preziosi-e-regalistica' ))){
+				if(is_page(array( 'store','abbigliamento','calzature-accessori','casa-e-tempo-libero','cura-della-persona', 'ipermercato', 'preziosi-e-regalistica' ))){
 				?>
 			<div class="submenu">
 				<?php
@@ -159,7 +159,7 @@
 					wp_nav_menu( array(
 				 			'menu' => 'Ristorante'
 				 	) );
-			
+
 				?>
 
 			</div>

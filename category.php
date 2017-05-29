@@ -22,7 +22,7 @@
 <?php
 $catname = $post->post_name;
 $catid = get_cat_ID($catname);
-echo "*".$catname."  (".$catid.") *";
+echo "* cat ".$catname."  (".$catid.") *";
 $args = array(
 'cat' => $catid,
 'orderby' => 'title',
