@@ -17,20 +17,22 @@
 }
 
 #site-navigation {
-  @include breakpoint(medium down) {
-    display: none !important;
-  }
+
   background-color: #000;
   color: #fff;
   margin-top: 0 !important;
-  padding: 0 10%;
+  padding: 0;
 
   @include breakpoint(xlarge) {
-    padding: 0 5%;
+    padding: 0 10%;
   }
 
   @include breakpoint(large) {
-    padding: 0;
+    padding: 0 5%;
+  }
+
+  @include breakpoint(medium down) {
+    display: none !important;
   }
 }
 
@@ -321,6 +323,14 @@
     @include grid-column-collapse();
     a { color: #fff ; font-size: 11px; }
     line-height: 5px;
+  }
+
+  @include breakpoint(medium) {
+     width: 75%;
+  }
+
+  @include breakpoint(small down) {
+     width: 100%;
   }
 }
 

@@ -27,20 +27,20 @@ switch ($post->post_name){
     break;
 
 
-    case 'servizio-al-tavolo':
+    case 'ris_tavolo':
     $catid = 21;
     $catname ="ris_tavolo";
     break;
 
 
-    case 'servizio-veloce':
+    case 'veloce':
     $catid = 24;
     $catname ="veloce";
     break;
 
 
 
-    case 'snack-bar-e-gelaterie':
+    case 'snack':
     $catid = 23;
     $catname ="snack";
     break;

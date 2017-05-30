@@ -51,7 +51,7 @@
 		<button class="close-button" data-close="" aria-label="Close modal" type="button">
     	<span aria-hidden="true">×</span>
   	</button>
-  	<iframe id="mapframe" src="/mappa/docs/mappa1.php?lang=it&amp;piano=1" width="830" height="515" frameborder="0"></iframe>
+  	<iframe id="mapframe" src="<?php echo home_url(); ?>/mappa/docs/mappa1.php?lang=it&amp;piano=1" width="830" height="515" frameborder="0"></iframe>
 	</div>
 
 	<header id="masthead" class="site-header" data-sticky-container>
@@ -72,8 +72,8 @@
 							<img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/logo.png" />
 						</a>
 						<span class="top-links">
-							<a href="servizi">Servizi</a>
-							<a href="newsletter">Newsletter</a>
+							<a href="<?php echo home_url(); ?>/servizi">Servizi</a>
+							<a href="<?php echo home_url(); ?>/newsletter">Newsletter</a>
 						</span>
 						<span class="orario">
 							<b>Apertura centro</b><br/>
@@ -100,7 +100,7 @@
 				</div>
 
 				<div class="ricerca hide-for-large-down">
-					<form name="cerca" role="search" method="get" id="searchform" action="/">
+					<form name="cerca" role="search" method="get" id="searchform" action="<?php echo home_url(); ?>">
 						<input type="hidden" name="cat" value="20,3">
 					<input type="text" name="s" id="s" placeholder="cerca negozio" />
 
@@ -126,7 +126,7 @@
 						</span>
 					</a>
 
-					<a target="_blank" href="https://instagram.com//Euroma2">
+					<a target="_blank" href="https://www.instagram.com/Euroma_2">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>

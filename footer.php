@@ -17,36 +17,36 @@
 					<b>SEZIONI</b>
 					<hr>
 					<ul class="vertical menu">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Negozi</a></li>
-						<li><a href="#">Ristoranti</a></li>
-						<li><a href="#">News</a></li>
-						<li><a href="#">Eventi</a></li>
-						<li><a href="#">Promozioni</a></li>
+						<li><a href="<?php echo home_url(); ?>">Home</a></li>
+						<li><a href="<?php echo home_url(); ?>/store">Negozi</a></li>
+						<li><a href="<?php echo home_url(); ?>/ristoranti">Ristoranti</a></li>
+						<li><a href="<?php echo home_url(); ?>/category/notizie">News</a></li>
+						<li><a href="<?php echo home_url(); ?>/category/eventi">Eventi</a></li>
+						<li><a href="<?php echo home_url(); ?>/category/promozioni">Promozioni</a></li>
 					</ul>
 				</div>
 				<div class="footer-colonna">
 					<b>SCOPRI IL CENTRO</b>
 					<hr>
 					<ul class="vertical menu">
-						<li><a href="#">Photo Gallery</a></li>
-						<li><a href="#">Info</a></li>
+						<li><a href="<?php echo home_url(); ?>/photo-gallery">Photo Gallery</a></li>
+						<li><a href="<?php echo home_url(); ?>/servizi">Servizi</a></li>
 					</ul>
 				</div>
 				<div class="footer-colonna">
 					<b>I NOSTRI CENTRI</b>
 					<hr>
 					<ul class="vertical menu">
-						<li><a href="#">ADRIATICO2</a></li>
-						<li><a href="#">APRILIA2</a></li>
-						<li><a href="#">SANMARTINO2</a></li>
+						<li><a href="http://www.adriatico2.it">ADRIATICO2</a></li>
+						<li><a href="http://www.aprilia-2.it">APRILIA2</a></li>
+						<li><a href="http://www.sanmartino2.it">SANMARTINO2</a></li>
 					</ul>
 				</div>
 				<div class="footer-colonna">
 					<b>AREA RISERVATA</b>
 					<hr>
 					<ul class="vertical menu">
-						<li><a href="/area-riservata">Accedi</a></li>
+						<li><a href="<?php echo home_url(); ?>/area-riservata">Accedi</a></li>
 					</ul>
 
 				</div>

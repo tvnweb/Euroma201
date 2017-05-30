@@ -8,6 +8,10 @@
 
 
   #footer {
+    margin-top: 14px; 
+    @include breakpoint(small down) {
+      display: none;
+    }
     color: #ffffff;
     /*h3{font-size: 1em; text-decoration: none;}*/
       @include grid-row();

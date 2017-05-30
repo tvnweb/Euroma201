@@ -21,7 +21,7 @@ get_header(); ?>
   <div id="menuicon-bar-container">
     <div id="menuicon-bar">
       <div class="menuicon-item">
-        <a href="#">
+        <a href="<?php echo home_url(); ?>/store">
           <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_negozi.png" />
           <br/>NEGOZI
         </a>
@@ -33,7 +33,7 @@ get_header(); ?>
         </a>
       </div>
       <div class="menuicon-item">
-        <a href="#">
+        <a href="<?php echo home_url(); ?>/category/eventi">
           <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/icona_eventi.png" />
           <br/>EVENTI
         </a>
@@ -78,14 +78,22 @@ get_header(); ?>
 </section>
 
 <section id="info">
+  <a name="orari"></a>
+  <div class="infobox" id="orari">
+    <h3>&#160;</h3>
+
+    <?php echo do_shortcode( "[op-overview set_id='orari-centro' include_io='true' hide_io_date='true' include_holidays='true' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Orari del Centro']" ); ?>
+    <?php echo do_shortcode( "[op-overview set_id='galleria' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Galleria']" ); ?>
+    <?php echo do_shortcode( "[op-overview set_id='food' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Food Court']" ); ?>
+    <?php echo do_shortcode( "[op-overview set_id='iper'  compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Ipermercato']" ); ?>
+  </div>
   <div class="infobox" id="promo">
     <h4>PROMOZIONI</h4>
-
     <div class="carousel">
       <div class="single-slide slider">
 
         <?php
-        $promo_args = array('post_type' => 'promozioni','cat'=> 418, 'posts_per_page' => 100, 'orderby' => 'rand');
+        $promo_args = array('post_type' => 'promozioni','cat'=> 418, 'posts_per_page' => 30, 'orderby' => 'rand');
         $promozioni = new WP_Query($promo_args);
 
         while($promozioni->have_posts()) : $promozioni->the_post();
@@ -100,12 +108,9 @@ get_header(); ?>
             $desc= get_the_content();
             $data_in = get_post_meta($post->ID, 'data_inizio', true);
             $data_inizio= date("d.m.Y", strtotime($data_in));
-
             $data_fine= date("d.m.Y", strtotime($data_out));
 
             $link= get_permalink();
-
-
         ?>
 
         <div class="promo">
@@ -132,7 +137,7 @@ get_header(); ?>
     <div class="carousel">
       <div class="single-slide slider">
     <?php
-    $news_args = array('post_type' => 'news','cat' => '414', 'posts_per_page' => 100, 'orderby' => 'date');
+    $news_args = array('post_type' => 'news','cat' => '414', 'posts_per_page' => 10, 'orderby' => 'date');
     $news = new WP_Query($news_args);
 
     while($news->have_posts()) : $news->the_post();
@@ -162,15 +167,7 @@ get_header(); ?>
 </div>
 </div>
   </div>
-  <a name="orari"></a>
-  <div class="infobox" id="orari">
-    <h3>&#160;</h3>
 
-    <?php echo do_shortcode( "[op-overview set_id='orari-centro' include_io='true' hide_io_date='true' include_holidays='true' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Orari del Centro']" ); ?>
-    <?php echo do_shortcode( "[op-overview set_id='galleria' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Galleria']" ); ?>
-    <?php echo do_shortcode( "[op-overview set_id='food' compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Food Court']" ); ?>
-    <?php echo do_shortcode( "[op-overview set_id='iper'  compress='true' time_format='G:i' highlight='period' highlighted_period_class='selected' title='Ipermercato']" ); ?>
-  </div>
 </section>
 
 <section id="gallery">
@@ -215,43 +212,24 @@ get_header(); ?>
   <h3>SERVIZI</h3>
 
   <div class="griglia-servizi">
+    <?php $serv_args = array('post_type' => 'servizi', 'posts_per_page' => 12);
+    $serv = new WP_Query($serv_args);
+
+    while($serv->have_posts()) : $serv->the_post();
+      $img = get_field("icona_servizio");
+      $slug = basename(get_permalink());
+      $link = home_url() . "/servizi#".$slug;
+    ?>
+
     <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/charge.jpg" />
+        <a href="<?php echo $link; ?>">
+          <img src="<?php echo $img['url']; ?>" />
+        </a>
     </div>
-    <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/taxi.jpg" />
-    </div>
-    <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/nursery.jpg" />
-    </div>
-    <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/wifi.jpg" />
-    </div>
-    <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/dentista.jpg" />
-    </div>
-    <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/lavanderia.jpg" />
-    </div>
-    <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/parafarm.jpg" />
-    </div>
-    <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/bancomat.jpg" />
-    </div>
-    <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/cappella.jpg" />
-    </div>
-    <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/estetista.jpg" />
-    </div>
-    <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/parrucchiere.jpg" />
-    </div>
-    <div class="ico-serv">
-      <img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/servizi/tabacchi.jpg" />
-    </div>
-    <div class="ico-serv">&#160;</div>
+
+    <?php endwhile; ?>
+
+
   </div>
 </section>
 

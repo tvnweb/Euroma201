@@ -4,15 +4,15 @@
 	<div class="container">
 		<div class="row columns">
 			<?php
-			$news_args = array('post_type' => 'servizi', 'posts_per_page' => 12);
-			$news = new WP_Query($news_args);
+			$serv_args = array('post_type' => 'servizi', 'posts_per_page' => 12);
+			$serv = new WP_Query($serv_args);
 
-			while($news->have_posts()) : $news->the_post();
+			while($serv->have_posts()) : $serv->the_post();
 				$img = get_field("icona_servizio");
 				$desc = get_field("descrizione");
 				$slug = basename(get_permalink());
 			?>
-			<a name="<?php echo $slug; ?>"></a>
+			<a class="ancora" name="<?php echo $slug; ?>"></a>
 			<div class="small-12">
 				<div class="newsbox">
 				<div class="newsthumb">

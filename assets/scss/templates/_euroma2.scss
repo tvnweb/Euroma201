@@ -65,7 +65,19 @@ li.blurImg img {
 
 .js-dropdown-active { z-index: 0 !important; }
 
-#slider { padding: 24px 12%; margin: 2% 0; background-color: #f8f8ee; }
+#slider {
+
+  margin: 2% 0; background-color: #f8f8ee;
+
+  @include breakpoint(large up) {
+    padding: 24px 12%;
+  }
+
+  @include breakpoint(medium down) {
+    padding: 14px 2%;
+  }
+
+}
 
 #gallery{
   @include grid-row();
@@ -80,7 +92,7 @@ li.blurImg img {
   h4 { text-align: center; font-weight: bold; font-size: 15px; }
   @include grid-row();
   .infobox {
-
+    margin: 1.5rem 0;
     .promo {
       float: left;
       position: relative;
@@ -91,7 +103,14 @@ li.blurImg img {
       b,i,p { float: left;  clear: left;  margin: 4px !important; }
 
     }
-    @include grid-column(4);
+
+    @include breakpoint(large up) {
+      @include grid-column(4);
+    }
+    @include breakpoint(medium down) {
+      @include grid-column(12);
+    }
+
     .columns{padding: 0;}
   }
 
@@ -109,8 +128,6 @@ li.blurImg img {
 
 #servizi {
   background-color: #f8f8ee;
-
-  padding: 14px 15%;
   margin: 2% 0;
   text-align: center;
   font-family: Muli;
@@ -122,6 +139,14 @@ li.blurImg img {
        @include grid-column(3);
 
     }
+  }
+
+  @include breakpoint(large up) {
+    padding: 14px 15%;
+  }
+
+  @include breakpoint(medium down) {
+    padding: 7px 2%;
   }
 }
 
@@ -175,11 +200,22 @@ li.blurImg img {
     .item-contatti {
       @include grid-column(4);
       p { margin-top: 10px; }
+      @include breakpoint(medium down) {
+          @include grid-column(12);
+      }
     }
     .mappa {
       @include grid-column(8);
+      @include breakpoint(medium down) {
+          @include grid-column(12);
+      }
     }
-    .riffs { margin-top: 200px; }
+    .riffs { margin-top: 200px;
+      @include breakpoint(medium down) {
+          margin-top: 10px;
+      }
+    }
+
   }
 
 }
@@ -244,12 +280,16 @@ li.blurImg img {
 
 .newsbox {
   .newsthumb { float: left; width: 200px; margin: 14px 14px 14px 0; }
-  .newsinfo { float: left; width: 70%; font-family: Muli; font-size: 16px;
+  .newsinfo { float: left; width: 70%;
+    font-family: Muli; font-size: 16px;
+    margin-bottom: 33px;
     b,span,p { float: left; clear: left;}
     span,p { margin-top: 17px; }
 
   }
 }
+
+.ancora { float: left; margin-top: -111px; }
 
 .infos { padding: 0 24px; p { font-size: 16px; } }
 
