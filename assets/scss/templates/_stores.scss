@@ -1,8 +1,27 @@
 .single-store{
   @include grid-row();
-  padding: 5% 2% 1%;
+  padding: 5% 0 1% 0;
+
+  .info-store { padding: 0; margin: 0;
+    font-weight: 600; font-family: Muli; font-size: 14px;
+    .orari {
+      height: 29px;
+      border: 1px solid #777;
+      padding: 0;
+      i { float: left; color: #993030; margin: 5px 0 0 5px; }
+      b { float: left; margin: 2px 7px; }
+      table,tbody,th,tr,td { padding: 0; width: auto; height: auto; }
+    }
+
+    .piano { border: 1px solid #777; padding-top: 3px;
+    margin-left: 3PX; text-align: center; }
+
+  }
+
+  .single-interna { margin-top: 10px; }
 
   .blocco1{
+    padding: 0 !important;
     @include breakpoint(small) {
       @include grid-column(12);
     }
@@ -14,6 +33,7 @@
     }
     .interno1{
       @include grid-column(6);
+      padding-left: 0 !important;
       img{
         border: 1px solid #000000;
       }
@@ -27,17 +47,16 @@
     }
   }
   .blocco2{
-    @include breakpoint(small) {
+    font-size: 13px;
+    padding-left: 4px !important;
+    @include breakpoint(medium down) {
       @include grid-column(12);
-      margin-top: 3% !important;
+      margin-top: 1% !important;
     }
-    @include breakpoint(medium) {
-      @include grid-column(12);
-      margin-top: 3% !important;
-    }
+
     @include breakpoint(large) {
       @include grid-column(6);
-      margin-top: 0 !important;
+      margin-top: 2% !important;
     }
   }
 
@@ -45,7 +64,8 @@
 
 .description{
   @include grid-row();
-  padding: 2% 2% 8%;
+  padding: 2% 0 5% 0 ;
+  font: 15px Muli;
   -webkit-column-count: 2;
    -moz-column-count: 2;
         column-count: 2;

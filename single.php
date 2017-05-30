@@ -16,6 +16,20 @@ get_header(); ?>
 			?>
 
 				<div class="single-store">
+					<div class="info-store row">
+
+						<span class="orari small-4 columns">
+						<i class="fa fa-clock-o"></i>
+						<b>ORARI</b>
+						<?php echo do_shortcode( "[op-overview set_id='galleria' compress='true' template='table' time_format='G:i' title='']" ); ?>
+						</span>
+						<span class="piano small-2 columns">
+						<?php
+						if(get_post_meta($post->ID, 'id_piano', true)=='1'){echo "Piano Terra";}
+						elseif(get_post_meta($post->ID, 'id_piano', true)=='2'){ echo "Primo Piano";}
+						elseif(get_post_meta($post->ID, 'id_piano', true)=='3'){ echo "Secondo Piano";} ?>
+						</span>
+					</div>
 						<div class="blocco1">
 							<div class="single-interna">
 								 <div class="interno1">
@@ -85,7 +99,7 @@ get_header(); ?>
 						</div>
 				</div>
 
-				
+
 				<div class="description">
 						<?php the_content(); ?>
 				</div>

@@ -17,7 +17,7 @@ get_header(); ?>
 
 <section id="hp">
 
-  <img src="/wp-content/uploads/fotograndeCentro.jpg" />
+  <img src="<?php echo content_url(); ?>/uploads/fotograndeCentro.jpg" />
   <div id="menuicon-bar-container">
     <div id="menuicon-bar">
       <div class="menuicon-item">

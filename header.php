@@ -87,7 +87,7 @@
 				</div>
 
 				<div class="lang">
-					<img src="/wp-content/plugins/qtranslate-x/flags/it.png" alt="ITA" />
+					<img src="<?php echo content_url(); ?>/plugins/qtranslate-x/flags/it.png" alt="ITA" />
 					<?php /*wp_nav_menu(array('menu' => 'Lingua'));*/ ?>
 					<!--img src="<?php echo get_bloginfo('template_url'); ?>/assets/img/icons/flag_ita.gif" /-->
 
