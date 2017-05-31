@@ -137,7 +137,7 @@ get_header(); ?>
     <div class="carousel">
       <div class="single-slide slider">
     <?php
-    $news_args = array('post_type' => 'news','cat' => '414', 'posts_per_page' => 10, 'orderby' => 'date');
+    $news_args = array('post_type' => 'news','cat' => '414', 'posts_per_page' => 10, 'orderby' => 'date', 'order' => 'DESC');
     $news = new WP_Query($news_args);
 
     while($news->have_posts()) : $news->the_post();
@@ -147,15 +147,13 @@ get_header(); ?>
     <div class="promo"> <?php
       $titolo= get_the_title();
       $image = get_field('thumb');
-      /*if($image['url'] == "") {
-        $image = get_post_thumbnail();
-      }*/
-      //$desc= get_the_content();
+      $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'eventi' );
+
       $permalink = get_permalink();
 
       ?>
       <a href="<?php echo $permalink; ?>">
-        <?php the_post_thumbnail('eventi'); ?>
+        <img src="<?php echo $url; ?>" alt="">
       </a>
       <b><?php echo $titolo; ?></b>
       <i><?php the_date("d.m.Y"); ?></i>
@@ -267,7 +265,7 @@ get_header(); ?>
               ?>
 
               <div>
-                <a href="<?php echo $link; ?>" target="_blank">
+                <a href="<?php the_permalink(); ?>">
                 <?php
                 if ( has_post_thumbnail() ) {
                     the_post_thumbnail('slide');
