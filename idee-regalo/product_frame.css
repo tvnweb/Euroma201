@@ -1,0 +1,123 @@
+@media screen and (min-width:320px) {
+	.content {
+		margin: auto;
+		width: 90%;
+	}
+	
+	#immagineProdotto {
+		text-align: center;
+		border-bottom: 2px solid #E4E4E4;
+	}
+
+	h2 {
+	    color: #2F2F2F;
+	    font-size: 18px;
+	}
+	.logoNegozio.mobile{
+		margin-left:auto;
+		margin-right:auto;
+    	width: 30%;
+	}
+	.logoNegozio.desktop {
+		display: none;
+	}
+	.datiProdotto {
+		clear: both;
+	    padding-bottom: 10px;
+	    border-bottom: 2px solid #E4E4E4;
+	}
+	.datiProdotto p {
+	    color: #2F2F2F;
+		margin: 0;
+	}
+	.datiProdotto p a {
+	    color: #2F2F2F;
+	    font-weight: bold;
+	}
+
+}
+
+@media only screen and (min-width: 400px) {
+	
+	#immagineProdotto {
+	    border: none;
+	    float: left;
+	    width: 40%;
+	}
+	#immagineProdotto img.immagineProdotto{
+		width:100%;
+	}
+	.logoNegozio.mobile {
+		display: none;
+	}
+	h2 {
+	    font-size: 23px;
+	}
+	.datiProdotto {
+		border: medium none;
+	    clear: none;
+	    padding: 0;
+	}
+	.datiProdotto p {
+	    margin: 15px 0;
+	}
+	.datiProdotto p span {
+	    display: block;
+	    font-weight: bold;
+	}
+	.datiProdotto p strong {
+	    font-weight: normal;
+	}
+	.logoNegozio.desktop {
+		display: block;
+	}
+}
+
+@media only screen and (min-device-width : 320px)  and (max-device-width : 480px){
+	.content {
+		margin: auto;
+		width: 90%;
+	}
+	
+	#immagineProdotto {
+		text-align: center;
+		border-bottom: 2px solid #E4E4E4;
+	}
+
+	h2 {
+	    color: #2F2F2F;
+	    font-size: 18px;
+	}
+	.logoNegozio.mobile{
+		margin-left:auto;
+		margin-right:auto;
+    	width: 30%;
+	}
+	.logoNegozio.desktop {
+		display: none;
+	}
+	.datiProdotto {
+		clear: both;
+	    padding-bottom: 10px;
+	    border-bottom: 2px solid #E4E4E4;
+	}
+	.datiProdotto p {
+	    color: #2F2F2F;
+		margin: 0;
+	}
+	.datiProdotto p a {
+	    color: #2F2F2F;
+	    font-weight: bold;
+	}	
+}
+	.datiProdottoLandscape{
+		display:none;
+	}
+@media screen and (orientation:landscape) and (min-width:320px) and (max-width:480px){
+	.datiProdottoLandscape{
+		display:block;
+	}
+	.datiProdotto{
+		display:none;
+	}	
+}

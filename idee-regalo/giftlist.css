@@ -1,0 +1,624 @@
+@media screen and (min-width:320px) {
+	div#formNuovaList {
+		background-color: #E4E4E4;
+	    color: #696969;
+	    margin: 5px auto;
+	    padding: 10px 0;
+	    width: 100%;
+	}
+	div#formNuovaList p {
+	    margin: 0 5px;
+	    text-align: center;
+	}
+	div#formNuovaList p a {
+		color: #696969;
+		font-weight: bold;
+	}
+	#formNuovaList .form {
+	    margin: 10px auto;
+	    text-align: center;
+	    max-width: 500px;
+	}
+	
+	input.nomeGL {
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 35px;
+    padding-left: 5px;
+    width: 80%;
+	}
+	input.crea {
+		background-color: #17891A;
+	    border: medium none;
+	    border-radius: 5px;
+	    color: #FFFFFF;
+	    font-size: 12px;
+	    font-weight: bold;
+	    height: 30px;
+	    margin-top: 30px;
+	    padding: 0 5px;
+	    width: 120px;
+	    cursor:pointer;
+	}
+
+div#barraGiftlist {
+	    background-color: #3B3B3B;
+	    height: 45px;
+	    padding: 5px 1%;
+	}
+	#barraGiftlist div#tendinaMenuGL {
+	    background-color: #2F2F2F;
+	    color: #FFFFFF;
+	    float: right;
+	    font-size: 14px;
+	    height: 25px;
+	    line-height: 12px;
+	    padding: 10px 5px;
+	    text-align: center;
+	    width: 53px;
+	}
+	#tendinaMenuGL select {
+	    height: 35px;
+	    opacity: 0;
+	    position: relative;
+	    top: -29px;
+	    width: 50px;
+	}
+	#barraGiftlist h3 {
+	    color: #FFFFFF;
+	    font-size: 16px;
+	    font-weight: normal;
+	    margin: 0;
+	}
+	
+	div#barraGiftlist {
+	    background-color: #3B3B3B;
+	    height: 45px;
+	    padding: 5px 1%;
+	}
+	#barraGiftlist div#tendinaMenuGL {
+	    background-color: #2F2F2F;
+	    color: #FFFFFF;
+	    float: right;
+	    font-size: 14px;
+	    height: 25px;
+	    line-height: 12px;
+	    padding: 10px 5px;
+	    text-align: center;
+	    width: 53px;
+	}
+	#tendinaMenuGL select {
+	    height: 35px;
+	    opacity: 0;
+	    position: relative;
+	    top: -29px;
+	    width: 50px;
+	}
+	#barraGiftlist h3 {
+	    color: #FFFFFF;
+	    font-size: 16px;
+	    font-weight: normal;
+	    margin: 0;
+	}
+	ul.boxLink {
+	    display: none;
+	}
+	ul.boxLink li a {
+	    color: #FFFFFF;
+	    font-size: 14px;
+	    text-decoration: none;
+	}
+	ul.boxLink li a img {
+	    border: medium none;
+	}
+	
+	/* Lista */
+	ul#elementiGL {
+		list-style: none outside none;
+	    margin: auto;
+	    padding: 0;
+	    width: 100%;
+	}
+	ul#elementiGL li img.immagine_prodotto{
+		height: 60px;
+    	
+	}		
+	ul#elementiGL li {
+		background-color: #e5e5e5;
+	    margin: 5px 0;
+	    padding: 5px;
+	}
+	div.cerca, div#addElementGL {
+	    background: none repeat scroll 0 0 #5C5C5C;
+	    border-radius: 5px;
+	    color: #FFFFFF;
+	    cursor: pointer;
+	    font-size: 15px;
+	    font-weight: bold;
+	    height: 9px;
+	    line-height: 12px;
+	    margin: 5px auto;
+	    padding: 20px 5px;
+	    text-align: center;
+	    width: 90%;
+	}
+	div#addElementGL {
+		background: none repeat scroll 0 0 #FFE066;
+	    color: #C5B05D;
+	    font-size: 58px;
+	    height: 30px;
+	    line-height: 11px;
+	    margin-bottom: 5px;
+	    padding: 5px;
+	}
+	table.filtri {
+	    width: 280px;
+	    margin: 5px auto;
+	}
+	table.filtri th {
+	    color: #696969;
+	    font-size: 12px;
+	    text-align: left;
+	    text-transform:uppercase;
+	}
+	table.filtri th.alignCenter {
+	    text-align: center;
+	}
+	table.filtri td {
+	    padding: 0;
+	    vertical-align: top;
+	}
+	table.filtri td input, table.filtri td select {
+		border: 1px solid #eaeaea;
+	}
+	input.nome {
+	    width: 235px;
+	}
+	.eta {
+	    width: 20px;
+	}
+	table.filtri div.slider{
+		height: 5px;
+	    margin-top: 5px;
+	    width: 100%;
+	}
+	table.filtri .ui-slider-handle.ui-state-default.ui-corner-all {
+		background: url("images/quadratino.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+		height: 11px;
+	    width: 13px;
+	}
+	table.filtri input.start, table.filtri input.end {
+		border: 1px solid #EAEAEA;
+	    color: #787878;
+	    float: left;
+	    margin: 5px 0 0;
+	    width: 50px;
+	}
+	table.filtri input.end {
+		float: right;
+	}
+	div.bottoni {
+		height: 82px;
+	    margin: auto;
+	    width: 90%;
+	    padding:20px 5px;
+	}
+	div.bottoni .bottoneRicerca, div.bottoni .bottoneEdita, div.bottoni .bottoneCancella{
+		background: url("images/backgroundBottoneRicerca.png") no-repeat scroll center center #17891A;
+	    border-radius: 5px;
+	    cursor: pointer;
+	    height: 40px;
+	    width: 100%;
+	}
+	div.bottoni .bottoneEdita{
+		background: url("images/backgroundBottoneEdita.png") no-repeat scroll center center #FF7E00;
+	    float: left;
+	    margin: 2px 1% 0 0;
+	    width: 49%;
+	}
+	div.bottoni .bottoneCancella{
+		background: url("images/backgroundBottoneCancella.png") no-repeat scroll center center #DB3033;
+	    float: left;
+	    margin: 2px 0 0 1%;
+	    width: 49%;
+	}
+	
+	ul#elementiGL li.selectProdotti {
+		background-color: #fff;
+	    margin: 5px 0;
+	    padding: 5px;
+	}
+	ul#elementiGL li.selectProdotti ul {
+		list-style: none outside none;
+	    margin: auto;
+	    padding: 0;
+	    width: 90%;
+    	text-align: center;
+	}
+	ul#elementiGL li.selectProdotti ul li {
+		background-color: #FFFFFF;
+	    border: 1px solid #E4E4E4;
+	    display: inline-table;
+	    margin: 5px 1.9%;
+	    width: 24%;
+	}
+	li.selectProdotti ul li img {
+		width: 90%;
+		margin: auto;
+	}
+	li.selectProdotti ul li p {
+		border-top: 2px solid #E4E4E4;
+	    font-size: 14px;
+	    margin: 5px 0 0;
+	}
+	li.selectProdotti div.addLinkExt {
+		background: none repeat scroll 0 0 #8F8F8F;
+	    border-radius: 5px;
+	    clear: both;
+	    color: #FFFFFF;
+	    font-size: 13px;
+	    height: 30px;
+	    line-height: 15px;
+	    margin: 5px auto 0;
+	    padding: 5px;
+	    text-align: center;
+	    width: 90%;
+	    cursor: pointer;
+	}
+	div.carouselPager {
+		display: none;
+	}
+	
+	div.formLinkExt {
+		background-color: #e5e5e5;
+	    margin: 5px 0;
+	    padding: 5px;
+	}
+	div.inserisciProdotto {
+	    background: none repeat scroll 0 0 #5C5C5C;
+	    border-radius: 5px;
+	    color: #FFFFFF;
+	    cursor: pointer;
+	    font-size: 15px;
+	    font-weight: bold;
+	    height: 9px;
+	    line-height: 12px;
+	    margin: 5px auto;
+	    padding: 20px 5px;
+	    text-align: center;
+	    width: 90%;
+	}
+	
+/* 	Pagina Vedi tutte */
+	div.datiViewAll {
+		float: left;
+	    text-align: left;
+	    width: 50%;
+	}
+	div.bottoniViewAll {
+		float: right;
+	    height: 135px;
+	    padding: 0;
+	    width: 50%;
+	}
+	table.dati {
+	    text-align: left;
+    	width: 95px;
+	}
+	table.dati th {
+	    color: #696969;
+	    font-size: 12px;
+	}
+	table.dati td {
+		color: #696969;
+	    padding: 0;
+    	vertical-align: top;
+	}
+	div.bottoniViewAll.bottoni .bottoneCancella {
+		height: 100px;
+    	margin: 18px 0 0 1%;
+	}
+	div.bottoniViewAll.bottoni .bottoneView {
+		background: url("images/backgroundBottoneView.png") no-repeat scroll center center #17891A;
+	    border-radius: 5px;
+	    float: left;
+	    height: 100px;
+	    margin: 18px 1% 0 0;
+	    width: 49%;
+	    cursor: pointer
+	}
+	img.spunta {
+		float: right;
+    	margin: 50px 20px 0 0;
+	}
+	
+	/* 	Giftlist pubblica */
+	ul#noLoggedGL {
+		list-style: none;
+		width: 80%;
+		margin: auto;
+	    text-align: center;
+	}
+	ul#noLoggedGL li {
+		border-bottom: 1px solid #E4E4E4;
+	    border-top: 1px solid #E4E4E4;
+	    margin: 10px 0;
+	    padding-bottom: 15px;
+	    width: 100%;
+	}
+	ul#noLoggedGL li.creaLaTuaGL {
+		border: medium none;
+    	padding: 0;
+	}
+	ul#noLoggedGL li img {
+		width: 80%;
+		border-bottom: 2px solid #e4e4e4;
+	}
+	ul#noLoggedGL li.creaLaTuaGL img {
+		width: 100%;
+		border-bottom: none;
+	}
+	ul#noLoggedGL h2 {
+	    font-size: 18px;
+	}
+	#noLoggedGL span {
+	    display: block;
+	}
+	ul#noLoggedGL li p {
+		margin: 0;
+	}
+	
+	div.socialContent{
+		width: 90%;
+		margin: auto;
+		text-align: center;
+	}
+	img#apriDialogInviaAmico {
+		cursor: pointer;
+	}
+	#inviaAmico-modal-content {
+	    padding: 75px 0;
+	    text-align: center;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	div#formNuovaList {
+		width: 80%;
+	}
+	div#barraGiftlist {
+		/*height: 55px;*/
+		height:75px;
+	    padding: 0 10%;
+	    width: 80%;
+	}
+	#barraGiftlist div#tendinaMenuGL {
+	    display:none;
+	}
+	#barraGiftlist h3 {
+	    color: #FFFFFF;
+	    font-size: 26px;
+	    font-weight: lighter;
+	    margin: 0;
+	    padding: 10px 0;
+	    text-align: center;
+	}
+	#barraGiftlist h3.totSpesa {
+		display: none;
+	}
+	ul.boxLink {
+		display: block;
+	    float: right;
+	    list-style: none outside none;
+	    margin: 0;
+	    padding: 0;
+	    position: absolute;
+	    right: 10%;
+	    text-align: right;
+	    top: 533px;
+	}
+	
+	ul.boxLink.idee_regalo_hp {
+	    top: 825px;
+	}
+	
+	ul.boxLink li {
+	    list-style: none outside none;
+	}
+	div.cerca, div#addElementGL {
+	    float: right;
+	    font-size: 12px;
+	    height: 27px;
+	    line-height: 12px;
+	    margin: 0 8px 0 0;
+	    padding: 20px 5px;
+	    width: 50px;
+	}
+	div#addElementGL {
+		background: none repeat scroll 0 0 #FFE066;
+	    color: #C5B05D;
+	    font-size: 58px;
+	    margin-bottom: 5px;
+	    margin-right: 12px;
+	}
+	
+	ul#elementiGL {
+		width: 80%;
+	}
+	ul#elementiGL li {
+    	padding: 5px 5px 5px 10px;
+	}
+	ul#elementiGL li img.immagine_prodotto{
+		height: 60px;
+    	cursor:pointer;
+	}	
+	.nome_prodotto,.nome_negozio{
+		cursor:pointer;
+	}
+	table.filtri {
+	    float: left;
+	    margin-left: 0;
+	    width: auto;
+	}
+	table.filtri td, table.filtri th {
+	    padding: 0 5px;
+	}
+	table.filtri td input, table.filtri td select {
+	    max-width: 95px;
+	}
+	input.nome {
+	    width: 135px;
+	}
+	table.filtri div.slider{
+		height: 5px;
+	    margin-top: 5px;
+	    width: 115px;
+	}
+	div.bottoni {
+		float: right;
+	    height: 67px;
+	    margin: 0;
+	    padding: 0 5px;
+	    width: 210px;
+	}
+	div.bottoni .bottoneRicerca, div.bottoni .bottoneEdita, div.bottoni .bottoneCancella{
+	    float: left;
+	    height: 67px;
+	    margin: 0 5px;
+	    width: 60px;
+	}
+	
+	div.carouselPager {
+		background: url("images/backgroundCarouselPrev.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	    cursor: pointer;
+	    float: left;
+	    height: 298px;
+	    width: 40px;
+	    display: block;
+	}
+	div.carouselPager.next {
+		background: url("images/backgroundCarouselNext.png");
+		float: right;
+	}
+	ul#elementiGL li.selectProdotti {
+		height: auto;
+    	padding: 5px 10px;
+	}
+	ul#elementiGL li.selectProdotti ul li {
+	    height: 252px;
+	    margin: 5px 3px;
+	    width: 130px;
+	}
+	li.selectProdotti ul li img {
+		width: 90%;
+		margin: auto;
+	}
+	li.selectProdotti ul li p {
+		border-top: 2px solid #E4E4E4;
+	    font-size: 14px;
+	    margin: 5px 0 0;
+	}
+	li.selectProdotti div.addLinkExt {
+		background: none repeat scroll 0 0 #8F8F8F;
+	    border-radius: 5px;
+	    clear: both;
+	    color: #FFFFFF;
+	    font-size: 13px;
+	    height: 30px;
+	    line-height: 15px;
+	    margin: 5px auto 0;
+	    padding: 5px;
+	    text-align: center;
+	    width: 90%;
+	}
+	div.inserisciProdotto {
+	    float: right;
+	    font-size: 12px;
+	    height: 27px;
+	    line-height: 12px;
+	    margin: 0 30px 0 0;
+	    padding: 20px 5px;
+	    width: 55px;
+	}
+	
+/* 	Pagina Vedi tutte */
+	div.datiViewAll {
+		width: 80%;
+	}
+	div.bottoniViewAll {
+	    height: 67px;
+	    padding: 0;
+	    width: 20%;
+	}
+	table.dati {
+	    float: left;
+	    margin: 10px;
+	    max-width: 150px;
+	    min-width: 100px;
+	    width: auto;
+	}
+	table.dati.dati_nome{
+	    max-width: 250px;
+	    min-width: 250px;	
+	}
+	table.dati td {
+	    font-size: 20px;
+	}
+	div.bottoniViewAll.bottoni .bottoneCancella {
+		height: 66px;
+    	margin: 0 0 0 1%;
+	}
+	div.bottoniViewAll.bottoni .bottoneView {
+		height: 66px;
+	    margin: 0 1% 0 0;
+	    width: 60px;
+	}
+	img.spunta {
+		float: left;
+    	margin: 20px 10px;
+	}
+	
+/* 	Giftlist pubblica */
+	ul#noLoggedGL {
+		list-style: none;
+		width: 80%;
+		margin: auto;
+	    text-align: center;
+	}
+	ul#noLoggedGL li {
+		border-bottom: 1px solid #E4E4E4;
+	    border-top: 1px solid #E4E4E4;
+	    float: left;
+	    margin: 10px 5%;
+	    padding-bottom: 15px;
+	    width: 22%;
+	}
+	ul#noLoggedGL li.creaLaTuaGL {
+		border: medium none;
+    	padding: 0;
+	}
+	ul#noLoggedGL li img {
+		width: 80%;
+		border-bottom: 2px solid #e4e4e4;
+	}
+	ul#noLoggedGL li.creaLaTuaGL img {
+		width: 100%;
+		border-bottom: none;
+	}
+	ul#noLoggedGL h2 {
+	    font-size: 18px;
+	}
+	#noLoggedGL span {
+	    display: block;
+	}
+	ul#noLoggedGL li p {
+		margin: 0;
+	}
+	div.spinner{
+	    float: right;
+	    height: 67px;
+	    margin: 0 5px;
+	    width: 60px;	
+	}	
+}

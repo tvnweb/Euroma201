@@ -1,0 +1,636 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+		.qtrans_language_chooser {
+			list-style: none outside none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		div#menuMultiLingua a, div#menuTop a{
+			float:left;
+		}
+		
+		 .qtrans_language_chooser li.active a{
+			text-decoration:underline !important;
+			
+		}
+		
+		.clearer{
+			clear:both;
+		}
+		
+		#newsbig{
+			clear:both;
+			margin: 0 auto;
+			max-width: 1500px;
+			position:relative;
+			z-index:0;
+		}
+		
+		#newsbig .radslide, #newsbig #radslide-10{
+			max-width:100%;
+		}
+		
+		#newsbig .radslide img {
+			max-width: 100%;
+		}
+		
+		#main_cont .box{
+			float:left;
+			margin:0 30px 0 50px;
+			width:240px;
+		}
+		
+		#main_cont .box .imgbox{
+			float:left;
+			width:100%;
+			height:140px;
+			padding-bottom:10px;
+		}
+		
+		.box > p{
+			color: #2F2F2F;
+			
+			font-size: 11px;
+			font-weight: 400;
+			line-height: 16px;
+			margin: 8px 0 0;
+			text-align: center;
+		}
+		
+		.box > p a{
+		 text-decoratione:underline;
+		 color:#2F2F2F;
+		}
+		
+		.box > p a:hover{
+		 text-decoration:none;
+		}
+		
+		.box.orario > p{
+			text-align:left;
+		}
+		
+		.box strong {
+			font-weight: 900;
+		}
+		
+		.box > img{
+			margin-left:29px;
+		}
+		
+		.box.evidenza .tit {
+			padding-bottom: 8px;
+		}
+		
+		.box.evidenza > img {
+			margin-left: 15px;
+		}
+		
+		.tit {
+			color: #a9a9a9;
+			padding-bottom: 15px;
+			text-align: center;
+			text-transform: uppercase;
+			font-size:12px;
+		}
+		
+		#yellow_bar{
+			width:100%;
+			float:left;
+			clear:both;
+			background:url(images/home/yellow_bar.png) top left repeat-x #ececec;
+		}
+		#yellow_bar .tit > span {
+			display: block;
+			float: left;
+			height: 13px;
+			margin-top: 15px;
+			width: 15px;
+		}
+		
+		#yellow_bar .tit > p{
+			height:42px;
+			line-height:42px;
+		}
+		
+		#content{
+			/*//width:960px;
+			margin:0 auto;
+			clear:both;
+			padding:50px 0 200px;
+			
+			font-size:13px;
+			color:#2f2f2f;*/
+		}
+		#content.container_12{
+			padding-bottom:40px;
+		}
+
+		#scheda_negozi{
+			float:right;
+			width:700px;
+			color:#fff;
+			font-size:12px;
+		}
+		
+		#scheda_negozi .sinistra{
+			width:67%;
+			float:left;
+		}
+		#scheda_negozi .destra{
+			width:33%;
+			float:right;
+		}
+		#scheda_negozi .destra .orario strong {
+			float: left;
+			margin-bottom: 5px;
+			width: 100%;
+			font-size:15px;
+		}
+		
+		#scheda_negozi .destra .orario{
+			clear: both;
+			color: #fff;
+			float: left;
+			font-size: 12px;
+			font-weight: 800;
+			margin-top: 10px;
+			text-align: left;
+			text-transform: uppercase;
+			width: 100%;
+		}
+		
+		#scheda_negozi .destra  .orario p{
+			margin-left:10px;
+			font-family:'Open sans';
+		}
+		#scheda_negozi .destra .orario span{
+			clear: both;
+			display: block;
+			float: left;
+			font-weight: 400;
+			width: 200px;
+		}
+		#scheda_negozi .centro {
+    border-bottom: 1px solid #494949;
+    border-top: 1px solid #494949;
+    clear: both;
+    float: left;
+    margin-top: 20px;
+    padding: 10px 0;
+    width: 100%;
+	font-family:'Open sans';
+}		
+		
+		#scheda_negozi .centro .piano{
+			float:left;
+			clear:both;
+			font-style:italic;
+			width:100%;
+			text-align:left;
+			margin-top:5px;
+		}
+		#scheda_negozi .centro .descrizione_scheda{
+			float:left;
+			clear:both;
+			width:100%;
+			text-align:left;
+			margin-top:5px;
+			font-size:13px;
+		}
+		#scheda_negozi .centro .piano a{
+			color:#f1bc29;
+			text-decoration:none;
+		}
+		
+		#scheda_negozi .ideeregalo {
+			width:100%; 
+			padding-top: 30px;
+			clear:both;
+		}
+	
+	#scheda_negozi .ideeregalo .list_prod {
+		background: none repeat scroll 0 0 #fff;
+		float: left;
+		height: auto;
+		margin: 0 1px;
+		width: 24.5%;
+		height:324px;
+	}
+
+	#scheda_negozi .ideeregalo .list_prod  .cont_prezzo{
+		height:auto;
+	}
+	#scheda_negozi .ideeregalo .list_prod a.titolo{
+		height:60px;
+	}
+	
+#scheda_negozi .ideeregalo .tit > p {
+    color: #fff;
+    font-size: 15px;
+	font-family:'Open sans';
+}
+#scheda_negozi .ideeregalo .tit span {
+    color: #f1bc29;
+}
+
+		
+		
+		#dovesiamo_scheda{
+			display: inline;
+			margin:0 0 0 4px;
+			padding:0;
+		}
+		
+		#dovesiamo_scheda > a {
+			color: #2f2f2f;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		
+		.slideViewer span.typo{
+			display:none;
+		}
+		
+		#titolo_scheda {
+			color: #f1bc29;
+			float: left;
+			font-size: 20px;
+			font-weight: 400;
+			padding: 0;
+			margin:0;
+		}
+		
+		#sottotitolo_scheda{
+			margin: 10px 0 0;
+			float:left;
+			clear:both;
+			font-size:13px;
+			line-height:18px;
+			text-align:left;
+		}
+		
+		#sottotitolo_scheda a, .descrizione_scheda a{
+			color:#f1bc29;
+			text-decoration:none;
+		}
+		
+		
+		#gallery_scheda {
+			padding-top: 0;
+		}
+		
+		.bx-controls.bx-has-pager {
+    display: none;
+}
+#slide_box {
+    position: relative;
+}
+/* GALLERY SCHEDA NEGOZIO */
+.outside {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+	height:38px;
+	margin-top:-19px;
+	width:100%;
+	margin-left:-2px;
+}
+
+
+#slider-prev{
+	background:url(images/freccia_sx.png) top left no-repeat transparent;
+	left:0;
+	float:left;
+}
+#slider-next{
+	background:url(images/freccia_dx.png) top left no-repeat transparent;
+	right:0;
+	float:right;
+}
+
+.bx-prev,.bx-next, #slider-next, #slider-prev {
+    display: block;
+    height: 38px;
+    width: 38px;
+}
+		
+		.news_destra {
+			float: right;
+			
+			width:35%;
+		}
+		
+		
+
+.news_destra li {
+    color: #fff;
+    font-family: 'Open sans';
+    font-size: 14px;
+    line-height: 21px;
+}
+		
+		.news_sinistra {
+			
+			width: 35%;
+		}
+		
+		
+		
+		/*Modifiche Mattia 4-2-2014*/
+		
+		.list_news{
+			border-bottom:1px solid #494949;
+			padding:20px 0 0;
+		}
+		
+		.list_news.archivio.first{
+			border-bottom:none;
+			margin-top:3%;
+			display:block;
+		}
+		
+		.list_news.archivio{
+			margin:0 0 0 0;
+			border:none;
+		}
+		
+		.list_news p.titolo{
+			margin:0;
+			paddding:0;
+		}
+				
+		/*.list_news p.titolo a{
+			font-weight:900;
+			font-size:1.5em;
+			text-decoration:none;
+			color:#2f2f2f;
+		}*/
+		
+		.list_news p.titolo a {
+    clear: both;
+    color: #fff;
+    float: left;
+    font-family: open sans;
+    font-size: 1.2em;
+    font-weight: 400;
+    /*padding-bottom: 10px;*/
+    text-decoration: none;
+}
+		
+		 p.titolo.areariservata_logout a{
+			font-size:1.1em;
+			text-decoration:underline;
+			color:#2f2f2f;
+			font-weight:900;
+		}
+		
+		.list_news p.titolo a.link_archivio{
+			background-color:#FFE066;
+			padding:6px;
+		}
+		
+		.list_news p.descrizione{
+			padding:5px 0 20px;
+			margin:0;
+		}
+		
+		.fasciagiftcard{
+			border-bottom:1px dashed #aaaaaa;
+			clear:both;
+			padding:10px 0;
+		}
+		
+		.fasciagiftcard .card{
+			padding-bottom:40px;
+		}
+		
+		.fasciagiftcard	h2 {
+			color: #565656;
+			font-size: 23px;
+			font-weight: 900;
+		}
+		/*
+		.box_negozio{
+			width:30%;
+			padding:30px 0;
+			margin:0 5px;
+			float:left;
+			font-family: "Lato";
+			text-align:center;
+		}*/
+		
+		.box_negozio img {
+    		height: auto;
+   			 width: 100%;
+		}
+
+		
+		
+		.box_negozio span{
+			color: #2F2F2F;
+			font-size:13px;
+			padding-left:5px;
+		}
+		
+		.box_negozio a.titolo:hover{
+			text-decoration:underline;
+		}
+		
+		.box_negozio .sep{
+			width:100%;
+			height:4px;
+			margin:0 auto;
+			clear:both;
+			padding:5px;
+		}
+		
+		.box_negozio p{
+			font-size:12px;
+			margin:0;
+			padding:0;
+			line-height:15px;
+		}
+		
+		
+		/* pagina info */
+		
+		#info_foto {
+			float: left;
+			height: 502px;
+			width: 480px;
+		}
+		
+		
+		#info_testo {
+			float: right;
+			height: 542px;
+			width: 460px;
+		}
+		
+		#info_testo > div {
+    color: #fff;
+    font-family: open sans;
+}
+		
+		#info_testo2 {
+			float: right;
+			height: 626px;
+			margin-top: 30px;
+			width: 460px;
+		}
+		
+		
+		#info_testo h1,#info_testo2 h1 {
+			font-size: 26px;
+			margin: 0;
+			padding: 0 0 10px;
+			color:#2f2f2f;
+			font-weight:900;
+		}
+		
+		
+			#mappa {
+				float: left;
+				height: 626px;
+				margin-top: 30px;
+				width: 480px;
+			}
+			
+			
+	/* contatti */
+	
+----------------------------------------------------------------------------------------------------*/
+#wpcf7-f1337-p1285-o1, #wpcf7-f1593-p1285-o1, #wpcf7-f1592-p1285-o1{
+	float:left;
+	width:480px;
+}
+#mappa_contatti{
+	float:left;
+	width:460px;
+	height:500px;
+}
+#info_azienda{
+	clear:both;
+	float:left;
+	margin-top:20px;
+}	
+
+div.wpcf7{
+	float: left;
+    margin: 0;
+    padding: 0;
+    width: 490px;
+}
+
+#info_sottotitolo{
+	/*color: #2F2F2F;*/
+	color:#f1bc29;
+	text-align:left;
+    font-size: 14px;
+    font-weight: 400;
+   /* padding: 10px 0;*/
+}
+
+.wpcf7-form > p {
+    clear: both;
+    padding: 10px 0;
+}
+
+/*Newsletter*/
+
+#barra_newsletter{
+	float:left;
+	width:204px;/*senza borodo 215*/
+	padding-right:10px;
+	min-height:636px;
+	margin-top:40px;
+	border-right:1px dashed #aaaaaa;
+}
+#barra_newsletter_txt{
+    font-size: 10px;
+	line-height:18px;
+}
+#barra_newsletter_txt p{
+	margin:0;
+	padding:0;
+	/*color:#2f2f2f;*/
+	color:#f1bc29;
+	font-weight:bold;
+}
+#barra_newsletter_txt a{
+	color:#2f2f2f;
+}
+
+#scheda_newsletter{
+	float:left;
+	width:665px;
+	height:auto;
+	margin-top:40px;
+}
+#scheda_newsletter_txt{
+	float:left;
+	width:645px;
+	font-size: 12px;
+	line-height:20px;
+	margin-left:20px;
+}
+#scheda_newsletter_txt p{
+	margin:0;
+	padding:0;
+	color:#f1bc29;
+	font-weight:bold;
+}
+#form_newsletter{
+	float:left;
+	margin:0;
+	padding:0;
+	width:645px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	margin-left:20px;
+	font-size: 12px;
+}
+#wpcf7-f2-p57-o1{
+	width:480px;
+}
+#cognome{ float:right; }
+#nome{float:right; }
+#nascita{float:right;padding-right: 14%;}
+#sesso{float:right; padding-right: 40%;}
+#indirizzo{ float:right;  }
+#citta{ float:right;  }
+#cap{ float:right;  }
+#mail{ float:right; }
+#cellulare{ float:right;  }
+#cliente{float:right; padding-right: 40%;}
+#sutorizzo_newsletter{ font-size:11px; }
+#btn_invia{ margin-left:380px; width:101px; height:19px;}
+
+#autorizzo_newsletter {
+    clear: both;
+    color: #fff;
+    display: block;
+    float: left;
+    font-family: open sans;
+}
+
+
+.link_al_video{
+font-size: 24px;
+
+}
+
+
+
+
+
+
+
+
+
+

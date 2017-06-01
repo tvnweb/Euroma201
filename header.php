@@ -8,6 +8,42 @@
  * @since FoundationPress 1.0.0
  */
 
+ /* FB - IDEE REGALO */
+ global $IRPATH;
+ global $IRURL;
+ $IRPATH = get_template_directory()."/idee-regalo/";
+ $IRURL = get_template_directory_uri()."/idee-regalo/";
+ $loginUrl="";
+ 	include_once($IRPATH."language.php");
+ 	global $lang;
+ 	$lang=$_GET['ln'];
+ 	 if($_SESSION['logged']!=1){
+
+
+ 			  include_once ($IRPATH.'libFacebook/facebook.php');
+
+ 		// Create our Application instance (replace this with your appId and secret).
+ 		$facebook = new Facebook(array(
+ 		  'appId'  => FB_LOGIN_APP_ID,
+ 		  'secret' => FB_LOGIN_APP_SECRET,
+ 		));
+ 		$user = $facebook->getUser();
+
+ 		if ($user) {
+ 			$logoutUrl = $facebook->getLogoutUrl();
+ 			$loginUrl = $facebook->getLoginUrl(array('scope' => 'email,user_birthday'));
+ 			try{
+ 				$user_profile = $facebook->api('/me?fields=birthday,first_name,last_name,email,gender');
+ 				my_registration_fb_callback($user_profile);
+ 			}catch(Exception $e){}
+ 		} else {
+ 			$statusUrl = $facebook->getLoginStatusUrl();
+ 			$loginUrl = $facebook->getLoginUrl(array('scope' => 'email,user_birthday'));
+ 		 }
+ 	}
+
+	 /* FINE FB - IDEE REGALO */
+
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
@@ -15,8 +51,109 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Development: Di Giorgio Mattia, Alessandro Bassi - Graphic Design: Lorenzo Previati">
+
+		<!-- IDEE REGALO -->
+		<?php
+		$posttype = get_post_type( get_the_ID() );
+		//echo $posttype;
+
+		if ($posttype == "produce"){
+
+		$d=strip_tags(apply_filters("the_title", $post->post_content));
+										if (count(trim($d))>0){ ?>
+		                                <?php $descrizione = $d; ?>
+										<?php } ?>
+
+		<title><?php the_title(); ?></title>
+
+				<meta name="description" content="<?php echo $descrizione; ?>"/>
+				<meta property="og:title" content="<?php echo get_the_title(); ?>" />
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content="http://<?php echo($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);?>" />
+				<meta property="og:image" content="<?php echo my_get_image_prodotto(get_the_ID());?>" />
+				<meta property="og:description" content="<?php echo $descrizione; ?>" />
+		<?php
+		}
+		?>
+
+		<!-- FINE IDEE REGALO -->
+
+
 		<?php wp_head(); ?>
 
+		<!-- IDEE REGALO -->
+
+
+
+
+		<link rel="stylesheet" type="text/css" href="<?php echo $IRURL; ?>/euroma2.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $IRURL; ?>/events.css" />
+
+		<script type="text/javascript">
+			var lang='<?php echo $_SESSION["WPLANG"];?>';
+			var urlAjax='<?php home_url();?>/wp-admin/admin-ajax.php';
+			var urlSite='<?php bloginfo("url");?>';
+			var urlTemplate="<?php bloginfo("template_url");?>";
+			var howisjson=<?php echo json_encode(my_gethowis());?>;
+			var tagisjson=<?php echo json_encode(my_gettagcustompost());?>;
+			var name="<?php echo  __($lang_nome);?>";
+			var titleerrore="<?php _e(utf8_encode($lang_errorenome));?>";
+			var cognomeerrore="<?php _e(utf8_encode($lang_errorecognome));?>";
+			var mailnonvalida="<?php _e(utf8_encode($lang_erroremailnonvalida));?>";
+			var passnonvalida="<?php _e(utf8_encode($lang_errorepassnonvalida));?>";
+			var numericononvalido="<?php _e(utf8_encode($lang_errorenumerico));?>";
+			var accettanonvalido="<?php _e(utf8_encode($lang_accettatermini));?>";
+			var eta="<?php _e(ucfirst(utf8_encode($lang_eta))); ?>";
+			var sesso="<?php _e(ucfirst(utf8_encode($lang_sesso))); ?>";
+			var chi="<?php _e(ucfirst(utf8_encode($lang_chie))); ?>";
+			var interessi="<?php _e(ucfirst(utf8_encode($lang_idearegalo))); ?>";
+			var cercaregalo="<?php _e(ucfirst(utf8_encode($lang_cercaregalo))); ?>";
+			var modificaregalo="<?php _e(ucfirst(utf8_encode($lang_modificaregalo))); ?>";
+			var eliminaregalo="<?php _e(ucfirst(utf8_encode($lang_cancellaregalo))); ?>";
+<?php if(isset($_GET['idgiftlist'])){?>
+			var idgiftlist=<?php echo $_GET['idgiftlist'];?>;
+<?php }?>
+<?php if(isset($_GET['idwishlist'])){?>
+		var idwishlist=<?php echo $_GET['idwishlist'];?>;
+		<?php my_get_wishlist_value();?>
+<?php }?>
+
+
+		var wrong_login="<?php _e(utf8_encode($wrong_login)); ?>";
+		</script>
+
+    <script type="text/javascript" src="<?php echo $IRURL; ?>/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="<?php echo $IRURL; ?>/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script type="text/javascript" src="<?php echo $IRURL; ?>/js/jquery.simplemodal.js"></script>
+		<script type="text/javascript" src="<?php echo $IRURL; ?>/js/jquery.carouFredSel-6.2.1.js"></script>
+		<script type="text/javascript" src="<?php echo $IRURL; ?>/js/css3-mediaqueries.js"></script>
+
+         <!-- CARUSEL-->
+        <script type="text/javascript" src="<?php echo $IRURL; ?>/js/carusel/jquery.jcarousel.min.js"></script>
+        <script type="text/javascript" src="<?php echo $IRURL; ?>/js/carusel/jcarousel.responsive.js"></script>
+
+
+		<script type="text/javascript" src="<?php echo $IRURL; ?>/js/functions.js"></script>
+
+        <script type="text/javascript" src="<?php echo $IRURL; ?>/fancybox/jquery.fancybox-1.3.4.js"></script>
+
+		<script type="text/javascript">
+        	var baseUrl = "<?php echo $IRURL; ?>";
+		</script>
+        <link rel="stylesheet" type="text/css" href="<?php echo $IRURL; ?>/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
+
+        <script src="<?php echo $IRURL; ?>/js/jquery.bxslider.min.js"></script>
+		<link href="<?php echo $IRURL; ?>/css/jquery.bxslider.css" rel="stylesheet" />
+
+
+		<style>
+			html{margin-top:0px !important;}
+		</style>
+		<script src="<?php echo $IRURL; ?>/js/jquery.jwbox.js"></script>
+        <script src="<?php echo $IRURL; ?>/js/jwplayer/jwplayer.js"></script>
+
+		<!-- FINE IDEE REGALO -->
 
 	</head>
 	<body <?php body_class(); ?>>
