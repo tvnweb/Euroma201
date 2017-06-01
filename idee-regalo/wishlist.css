@@ -15,7 +15,7 @@ p.categoria{
     font-size: 10px;
     margin-left: 10px;
     margin-top: 10px;
-}	
+}
 .login > p {
     clear: both;
     font-size: 12px;
@@ -57,7 +57,7 @@ p.categoria{
 	float:left;
 	width:100%;
 }
-#elementiWL li,#noLoggedWL li{	
+#elementiWL li,#noLoggedWL li{
     width: 33%;
 	height: auto;
     min-height: 300px;
@@ -126,7 +126,7 @@ p.categoria{
 		text-transform: uppercase;
 		width: 100%;
 	}
-	
+
 	.login .elenco_wishlist{
 		width:90%;
 		margin:0 10px !important;
@@ -141,7 +141,7 @@ p.categoria{
 		color:#efefef;
 		font-size:12px;
 		font-weight:600;
-		font-style:italic; 
+		font-style:italic;
 		text-decoration:none;
 		width:100%;
 		text-align:center;
@@ -150,24 +150,25 @@ p.categoria{
 		margin-top:20px;
 	}
 	.contwishlist{
+		float: left;
 		width:100%;
 		background:#FFF;
 		padding-bottom:50px;
 	}
-	
+
 	.contwishlist .left{
 		float: left;
     	width: 24%;
 		background:#FFF;
 	}
-	
+
 	.contwishlist .right{
 		float: right;
 		max-width: 728px;
     width: 74%;
 		background:#FFF;
 	}
-	
+
 	.contwishlist .minileft{
 		float:left;
 		width:65%;
@@ -176,7 +177,7 @@ p.categoria{
 		float:left;
 		width:35%;
 	}
-	
+
 	.contwishlist .miniright #addinWishList{
 		background: url("images/addinwishlist.jpg") repeat-x scroll left top transparent;
 		border: 1px solid #dea400;
@@ -191,7 +192,7 @@ p.categoria{
 		text-transform: uppercase;
 		width: 100%;
 	}
-	
+
 	.contwishlist .minileft .anche,.contwishlist .miniright .anche_resp,.right .anche_resp{
 		font-size:15px;
 		font-weight:600;
@@ -207,22 +208,22 @@ p.categoria{
 		height:30px;
 		line-height:30px;
 	}
-	
+
 	.contwishlist .miniright .anche_resp{
 		display:none;
 	}
 	.contwishlist .miniright .anche{
 		display:block;
 	}
-	
-	
+
+
 	.contwishlist .minileft .immagineSingleProdotto {
 		display: block;
 		float: none;
 		margin: 0 auto;
 		max-width: 490px;
     	width: 100%;
-	} 
+	}
 
 	.contwishlist .miniright .datiProdotto{
 		color:#5b5b5b;
@@ -231,7 +232,7 @@ p.categoria{
 		color: #ac8b34;
 		font-size: 15px;
 		font-weight: 600;
-		text-decoration: none; 
+		text-decoration: none;
 		padding-bottom:10px;
 	}
 	.contwishlist .miniright .datiProdotto .cont_prezzo {
@@ -248,19 +249,19 @@ p.categoria{
 		margin:0;
 		padding:0;
 	}
-	
-	.contwishlist .miniright .datiProdotto .cont_prezzo .lotrovida, 
+
+	.contwishlist .miniright .datiProdotto .cont_prezzo .lotrovida,
 	.contwishlist .miniright .datiProdotto .cont_prezzo .lotrovida a {
 		font-weight: 400;
 		text-decoration: none;
 	}
-	
+
 	.contwishlist .miniright .datiProdotto .descrizione{
 		font-size:12px;
 		line-height:16px;
 		padding:10px 0;
 	}
-	
+
 	/*.contwishlist .miniright .creaWishList {
 		color: #5b5b5b;
 		font-style: italic;
@@ -305,9 +306,9 @@ p.categoria{
 		text-decoration:none;
 		color:#fff;
 		text-align:center;
-		
+
 	}
-	
+
 	.contwishlist .immagineProdotto {
     max-height: 200px;
     max-width: 80%;
@@ -323,7 +324,7 @@ p.categoria{
 		min-height:300px;
 		padding-bottom:30px;
 	}
-	
+
 	.contwishlist .left .login .tit_login {
 		border-top: 1px solid #747474;
 		float: left;
@@ -364,8 +365,8 @@ p.categoria{
 		width:100%;
 		text-align:center;
 		text-transform:uppercase;
-	} 
-	
+	}
+
 	.contwishlist .left .login ul,.contwishlist .left .login li{
 		margin:0;
 		padding:0;
@@ -375,21 +376,22 @@ p.categoria{
 		font-size: 12px;
 		font-weight: 600;
 	}
-	
+
 	.contwishlist .left .login span.destra {
 		float: right;
 	}
 	.contwishlist .left .login li span{
 		cursor:pointer;
 	}
+	
 	.box_whishlist{
 		background: none repeat scroll 0 0 #1b1b1b;
-		height: auto;/*
-		max-height: 192px;*/
+		height: auto;
+		min-height: 163px;
 		max-width: 754px;
 		width: 100%;
 	}
-	
+
 	.box_whishlist .inner{
 		border: 1px solid #fff;
 		float: left;
@@ -397,7 +399,7 @@ p.categoria{
 		margin: 2%;
 		width: 95%;
 	}
-	
+
 	.box_whishlist p{
 		font-weight:300;
 		color:#fff;
@@ -419,8 +421,8 @@ p.categoria{
 	.box_whishlist p.voce3{
 		padding-bottom:10px;
 	}
-	
-	
+
+
 	#FakenomeLista2,#nomeLista2{
 		 border: 1px solid #b1b1b1;
 		clear: both;
@@ -434,13 +436,13 @@ p.categoria{
 		text-indent:10px;
 		width: 90%;
 	}
-	
+
 	.socialContent{
 		padding-top:20px;
 		text-align:center;
 		padding-bottom:20px;
 	}
-	
+
 
 
 @media screen and (min-width:320px) {
@@ -465,7 +467,7 @@ p.categoria{
 		clear:both;
 		width: 95%;
 	}
-	
+
 	.contwishlist .miniright .anche_resp{
 		display:none !important;
 	}
@@ -487,12 +489,12 @@ p.categoria{
 		margin: 0 auto;
     	width: 99%;
 	}
-	
+
 	div#menuLogin a, div#menuLoginLogout a{
 		color:#696969;
 		text-decoration:none;
 	}
-	
+
 	div#formNuovaList p {
 	    margin: 0 5px;
 	    text-align: center;
@@ -501,14 +503,14 @@ p.categoria{
 		color: #696969;
 		font-weight: bold;
 	}
-	
-	
+
+
 	#formNuovaList form {
 	    margin: 10px auto;
 		max-width: 500px;
 		padding: 0;
 	}
-	
+
 	.miniright #formNuovaList form {
 		border-top: none;
 	}
@@ -557,7 +559,7 @@ p.categoria{
 	    width: 120px;
 	    cursor:pointer;
 	}
-	
+
 	div#barraWishlist {
 	    background-color: #3B3B3B;
 	    height: 45px;
@@ -595,29 +597,29 @@ p.categoria{
 	    font-size: 14px;
 	    text-decoration: none;
 	}
-	
+
 	.contwishlist .left .login input[type="text"],.contwishlist .left .login input[type="password"]{
 		background:#666;
 		border-radius: 5px;
 		border:1px solid #333;
 		margin: 10px auto;
 		width: 80%;
-		
+
 		clear: both;
 		color: #b1b1b1;
 		display: block;
 		font-size: 12px;
 		font-style: italic;
 		height: 36px;
-		
+
 		padding: 0 10px;
 	}
-	
+
 	/* Lista */
-	
+
 	.nome_prodotto,.nome_negozio{
 		cursor:pointer;
-	}	
+	}
 	.filter {
 	    width: 240px;
 	    margin: 20px auto 0;
@@ -655,17 +657,17 @@ p.categoria{
 	.filter .budget label{
 		margin-top:0;
 	}
-	
+
 	.filter .row{
 		margin:5px 0 0 10px;;
 		float:left;
 		clear:both;
 	}
-	
+
 	.filter .subrow {
-		margin-left: 15px; 
+		margin-left: 15px;
 	}
-	
+
 	.filter input {
 		margin-left: 10px;
 	}
@@ -692,27 +694,27 @@ p.categoria{
 	.filter input.end {
 		float: right;
 	}
-	
+
 	.filter input.start{
 		margin: 12px 0 0 1%;
 	}
 	.filter input.end{
 		margin: 12px 9% 0 0;
 	}
-	
+
 	span.eurostart{
 		float: left;
 		margin-left: 6%;
 		margin-top: 13px;
 	}
-	
+
 	span.euroend{
 		float: right;
 		margin-right: 1%;
 		margin-top: 13px;
 	}
-	
-	
+
+
 	div.cerca, div#addElementWL {
 	    background: url("images/filtercerca.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
 	    color: #FFFFFF;
@@ -741,15 +743,15 @@ p.categoria{
 		text-transform:uppercase;
 		clear:both;
 	}
-	
+
 	.contwishlist .left.left_resp .login{
 		padding-bottom:5px;
 	}
-	
+
 	.contwishlist .left.left_resp .filter div.slider{
 		width:80%;
 	}
-	
+
 	#elementiWL li, #noLoggedWL li {
 		float: left;
 		height: auto;
@@ -762,7 +764,7 @@ p.categoria{
 
 
 @media screen and (min-width: 768px) {
-	
+
 	#facebookLogin {
     clear: both;
     float: none;
@@ -772,15 +774,15 @@ p.categoria{
 }
 	#elementiWL li, #noLoggedWL li{
 			width:90%;
-			margin:0 auto; 
+			margin:0 auto;
 			float:none;
 		}
 	.contwishlist .left{
 		display:block;
 		width:240px;
 	}
-	
-	
+
+
 	.contwishlist .minileft,
 	.contwishlist .miniright{
 		float: none;
@@ -789,8 +791,8 @@ p.categoria{
 	}
 	#FakenomeLista2, #nomeLista2{
 		margin:5px auto;
-	}	
-	
+	}
+
 	.contwishlist .left.left_resp{
 		display:none;
 	}
@@ -817,7 +819,7 @@ p.categoria{
     width: 90%;
 	}
 
-	
+
 	.login #creaWishList, .login #creaWishListResp {
 		font-size: 12px;
 		font-style: italic;
@@ -839,32 +841,32 @@ p.categoria{
 	.contwishlist .miniright .anche_resp{
 		display:block;
 	}
-	
+
 	.filter div.slider {
 		height: 5px;
 		margin: 5px auto 0;
 		width: 90%;
 	}
-	
+
 	.filter input.start{
 		margin: 12px 0 0 1%;
 	}
 	.filter input.end{
 		margin: 12px 9% 0 0;
 	}
-	
+
 	span.eurostart{
 		float: left;
 		margin-left: 6%;
 		margin-top: 13px;
 	}
-	
+
 	span.euroend{
 		float: right;
 		margin-right: 1%;
 		margin-top: 13px;
 	}
-	
+
 	.contwishlist .right .list_prod {
     clear: none;
     float: left;
@@ -872,11 +874,11 @@ p.categoria{
     width: 49%;
 }
 
-	
+
 }
 
 @media screen and (min-width: 1024px) {
-	
+
 #elementiWL li, #noLoggedWL li {
     float: left;
     height: auto;
@@ -885,7 +887,7 @@ p.categoria{
     padding-bottom: 30px;
     width: 33%;
 }
-	
+
 #facebookLogin {
     clear: both;
     float: none;
@@ -893,7 +895,7 @@ p.categoria{
     margin: 15px auto 0;
     width: 187px;
 }
-	
+
 .contwishlist .right .list_prod {
     clear: none;
     float: left;
@@ -911,7 +913,7 @@ p.categoria{
 	.contwishlist .left.left_resp{
 		display:none;
 	}
-	
+
 	.contwishlist .minileft{
 		max-width:490px;
 		float:left;
@@ -929,7 +931,7 @@ p.categoria{
 	.contwishlist .miniright .anche_resp,.right .anche_resp {
 		display: none;
 	}
-	
+
 	div#formNuovaList {
 		font-size: 12px;
 		padding-top: 25px;
@@ -970,8 +972,8 @@ p.categoria{
 		width:70%;
 		margin:0 15%;
     	cursor:pointer;
-	}	
-	
+	}
+
 	.filter {
 	    float: left;
 		clear:both;
@@ -1006,9 +1008,9 @@ p.categoria{
 		cursor:pointer;
 		    margin: 5px 0 0 13px;
 		}
-		
-	
-	
+
+
+
 /* 	Pagina Vedi tutte */
 	div.datiViewAll {
 		width: 80%;
@@ -1037,7 +1039,7 @@ p.categoria{
 	    margin: 0 1% 0 0;
 	    width: 60px;
 	}
-	
+
 	.filter.infoprodotto{
 		width:100px;
 		margin-top:6px;
@@ -1049,5 +1051,5 @@ p.categoria{
 	.filter.infoprodotto tr td input{
 		width:95px;
 	}
-	
+
 }
